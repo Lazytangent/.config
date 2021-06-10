@@ -1,0 +1,249 @@
+
+# 2021-05-23 16:19:06.930914
++\q
+
+# 2021-05-24 12:19:37.166801
++create user noah with password 'password' createdb;
+
+# 2021-05-24 12:19:38.047509
++\q
+
+# 2021-05-24 13:54:27.086216
++create user john_sims with password 'password' createdb;
+
+# 2021-05-24 13:54:27.889436
++\q
+
+# 2021-05-24 16:13:28.605073
++create user connor with password 'password' createdb;
+
+# 2021-05-24 16:13:29.229310
++\q
+
+# 2021-05-24 17:17:58.434476
++create user jia with password 'password' createdb;
+
+# 2021-05-24 17:18:01.765587
++\q
+
+# 2021-05-24 17:57:02.042619
++create user andrew_loeffler with password 'password' createdb;
+
+# 2021-05-24 17:57:02.953353
++\q
+
+# 2021-05-24 19:10:18.808116
++create user ben_ash with password 'password' createdb;
+
+# 2021-05-24 19:10:19.574046
++\q
+
+# 2021-05-25 14:06:10.644164
++create user nathan_mount with password 'password' createdb;
+
+# 2021-05-25 14:06:11.462680
++\q
+
+# 2021-05-25 15:30:14.757915
++create user dan_rosen with password 'password' createdb;
+
+# 2021-05-25 15:30:15.678450
++\q
+
+# 2021-05-25 17:44:05.052631
++create user drew_long with password 'password' createdb;
+
+# 2021-05-25 17:44:05.929878
++\q
+
+# 2021-05-25 18:08:12.608089
++create user sylvia with password 'password' createdb;
+
+# 2021-05-25 18:08:13.692882
++\q
+
+# 2021-05-25 18:29:25.634866
++create user james with password 'password' createdb;
+
+# 2021-05-25 18:29:27.880287
++\q
+
+# 2021-05-26 13:11:22.400671
++create user jimson with password 'password' createdb;
+
+# 2021-05-26 13:11:23.444689
++\q
+
+# 2021-05-26 15:29:26.628883
++create user mike with password 'password' createdb;
+
+# 2021-05-26 15:29:27.525724
++\q
+
+# 2021-05-26 16:33:28.684288
++create user zaviar with password 'password' createdb;
+
+# 2021-05-26 16:33:29.374385
++\q
+
+# 2021-05-26 19:18:41.587527
++create user owen with password 'password' createdb;
+
+# 2021-05-26 19:18:42.743634
++\q
+
+# 2021-05-27 13:07:06.084289
++create user kevin with password 'password' createdb;
+
+# 2021-05-27 13:07:06.906234
++\q
+
+# 2021-05-27 18:15:26.454759
++create user alexandra with password 'password' createdb;
+
+# 2021-05-27 18:15:28.521314
++q
+
+# 2021-05-27 18:15:30.019892
++\q
+
+# 2021-05-30 14:38:54.825020
++create user caroline with password 'password' createdb;
+
+# 2021-05-30 14:38:55.695168
++\q
+
+# 2021-05-30 14:39:14.736876
++create database caroline_db with owner caroline;
+
+# 2021-05-30 14:39:16.495207
++\q
+
+# 2021-06-01 09:49:01.810676
++\l
+
+# 2021-06-01 09:49:16.401813
++drop database alexandra_db andrew_loeffler_db;
+
+# 2021-06-01 09:49:22.621060
++drop database alexandra_db;
+
+# 2021-06-01 09:49:28.294571
++drop database andrew_loeffler_db;
+
+# 2021-06-01 09:49:39.425500
++drop database ben_ash_db;
+
+# 2021-06-01 09:49:51.377457
++drop database connor_db;
+
+# 2021-06-01 09:49:57.074338
++drop database dan_rosen_db;
+
+# 2021-06-01 09:50:02.637127
++drop database drew_long_db;
+
+# 2021-06-01 09:50:09.249540
++drop database james_db;
+
+# 2021-06-01 09:50:15.641857
++drop database jia_db;
+
+# 2021-06-01 09:50:20.166057
++drop database jimson_db;
+
+# 2021-06-01 09:50:24.505790
++drop database kevin_db;
+
+# 2021-06-01 09:50:28.108198
++\l
+
+# 2021-06-01 09:50:33.602930
++drop database john_sims_db;
+
+# 2021-06-01 09:50:47.021898
++drop database mike_db;
+
+# 2021-06-01 09:50:51.222095
++drop database nathan_mount_db;
+
+# 2021-06-01 09:50:56.257894
++drop database noah_db;
+
+# 2021-06-01 09:51:00.185873
++drop database owen_db;
+
+# 2021-06-01 09:51:06.702012
++drop database sylvia_db;
+
+# 2021-06-01 09:51:11.357178
++drop database zaviar_db;
+
+# 2021-06-01 09:51:14.658033
++\l
+
+# 2021-06-01 09:51:21.581534
++select * from auth_db;
+
+# 2021-06-01 09:51:26.997945
++\c auth_db
+
+# 2021-06-01 09:51:29.924278
++\dt
+
+# 2021-06-01 09:51:36.870014
++\c petermai
+
+# 2021-06-01 09:51:40.286537
++drop database auth_db;
+
+# 2021-06-01 09:51:45.340044
++drop database data_flow_db;
+
+# 2021-06-01 09:51:47.974627
++\l
+
+# 2021-06-01 09:51:59.702554
++\c fullstack_db
+
+# 2021-06-01 09:52:02.745998
++\dt
+
+# 2021-06-01 09:52:16.570002
++select * from "Users";
+
+# 2021-06-01 09:52:26.430074
++\c petermai
+
+# 2021-06-01 09:52:28.479142
++\l
+
+# 2021-06-01 09:52:41.285700
++drop database prisma_scratch_db;
+
+# 2021-06-01 09:52:44.004446
++\du
+
+# 2021-06-01 09:52:53.077128
++drop user alexandra;
+
+# 2021-06-01 09:53:06.036302
++\q
+
+# 2021-06-01 17:20:46.947269
++create user maps_test with password 'password' createdb;
+
+# 2021-06-01 17:20:49.074525
++\q
+
+# 2021-06-02 09:55:25.002265
++\du
+
+# 2021-06-02 09:55:56.212827
++\q
+
+# 2021-06-02 09:56:14.413056
++drop database maps_db;
+
+# 2021-06-02 09:56:16.272436
++\q
