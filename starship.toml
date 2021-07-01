@@ -23,7 +23,6 @@ $nix_shell\
 $env_var\
 $cmd_duration\
 $jobs\
-$battery\
 $time\
 $status\
 $line_break\
