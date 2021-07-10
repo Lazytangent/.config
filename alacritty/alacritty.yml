@@ -140,15 +140,6 @@ font:
 
 # Colors (Tomorrow Night)
 colors:
-  # Default colors
-  primary:
-    background: '#060810'
-    foreground: '#b6b8c0'
-
-  # primary:
-  #   background: '#1e222a'
-  #   foreground: '#c8ccd4'
-
     # Bright and dim foreground colors
     #
     # The dimmed foreground color is calculated automatically if it is not
@@ -233,27 +224,37 @@ colors:
   #  text: CellBackground
   #  background: CellForeground
 
-  # Normal colors
-  normal:
-    black:   '0x060810'
-    red:     '0xd5996f'
-    green:   '0x6fd599'
-    yellow:  '0x99d56f'
-    blue:    '0x996fd5'
-    magenta: '0xd56f99'
-    cyan:    '0x6f99d5'
-    white:   '0xb6b8c0'
+  # Moonlight Theme
+  # primary:
+  #   background: '#060810'
+  #   foreground: '#b6b8c0'
 
-  # Bright colors
-  bright:
-    black:   '0x3e4048'
-    red:     '0xd5996f'
-    green:   '0x6fd599'
-    yellow:  '0x99d56f'
-    blue:    '0x996fd5'
-    magenta: '0xd56f99'
-    cyan:    '0x6f99d5'
-    white:   '0xe6e8f0'
+  # Normal colors
+  # normal:
+  #   black:   '0x060810'
+  #   red:     '0xd5996f'
+  #   green:   '0x6fd599'
+  #   yellow:  '0x99d56f'
+  #   blue:    '0x996fd5'
+  #   magenta: '0xd56f99'
+  #   cyan:    '0x6f99d5'
+  #   white:   '0xb6b8c0'
+
+  # # Bright colors
+  # bright:
+  #   black:   '0x3e4048'
+  #   red:     '0xd5996f'
+  #   green:   '0x6fd599'
+  #   yellow:  '0x99d56f'
+  #   blue:    '0x996fd5'
+  #   magenta: '0xd56f99'
+  #   cyan:    '0x6f99d5'
+  #   white:   '0xe6e8f0'
+
+  # Default colors
+  # primary:
+  #   background: '#1e222a'
+  #   foreground: '#c8ccd4'
 
   # normal:
   #   black:   '#1e222a'
@@ -274,6 +275,68 @@ colors:
   #   magenta: '#c678dd'
   #   cyan:    '#56b6c2'
   #   white:   '#c8ccd4'
+
+  # GitHub Dark
+  # primary:
+  #   background: '0x24292e'
+  #   foreground: '0xd1d5da'
+
+  # # Normal colors
+  # normal:
+  #   black:   '0x1D2125'
+  #   red:     '0xf14c4c'
+  #   green:   '0x23d18b'
+  #   yellow:  '0xe2e210'
+  #   blue:    '0x3b8eea'
+  #   magenta: '0xbc3fbc'
+  #   cyan:    '0x29b7da'
+  #   white:   '0xd1d5da'
+
+  # # Bright colors
+  # bright:
+  #   black:   '0x666666'
+  #   red:     '0xf14c4c'
+  #   green:   '0x23d18b'
+  #   yellow:  '0xf5f543'
+  #   blue:    '0x3b8eea'
+  #   magenta: '0xd670d6'
+  #   cyan:    '0x29b7da'
+  #   white:   '0xd1d5da'
+
+  # indexed_colors:
+  #   - { index: 16, color: '0xd18616' }
+  #   - { index: 17, color: '0xf14c4c' }
+
+  # GitHub Dimmed
+  primary:
+    background: '0x22272e'
+    foreground: '0x768390'
+
+  # Normal colors
+  normal:
+    black:   '0x1B1F25'
+    red:     '0xff938a'
+    green:   '0x6bc46d'
+    yellow:  '0xc69026'
+    blue:    '0x6cb6ff'
+    magenta: '0xb083f0'
+    cyan:    '0x56d4dd'
+    white:   '0x768390'
+
+  # Bright colors
+  bright:
+    black:   '0x636e7b'
+    red:     '0xff938a'
+    green:   '0x6bc46d'
+    yellow:  '0xdaaa3f'
+    blue:    '0x6cb6ff'
+    magenta: '0xdcbdfb'
+    cyan:    '0x56d4dd'
+    white:   '0x768390'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xff938a' }
 
   # Dim colors
   #
