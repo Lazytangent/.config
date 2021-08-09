@@ -102,24 +102,24 @@ window:
   #multiplier: 3
 
 # Font configuration
-font:
-  normal:
-    family: Inconsolata Nerd Font
-    style: Regular
+# font:
+#   normal:
+#     family: Inconsolata Nerd Font
+#     style: Regular
 
-  bold:
-    family: Inconsolata Nerd Font
-    style: Bold
+#   bold:
+#     family: Inconsolata Nerd Font
+#     style: Bold
 
-  italic:
-    family: Inconsolata Nerd Font
-    style: Italic
+#   italic:
+#     family: Inconsolata Nerd Font
+#     style: Italic
 
-  bold_italic:
-    family: Inconsolata Nerd Font
-    style: Bold
+#   bold_italic:
+#     family: Inconsolata Nerd Font
+#     style: Bold
 
-  size: 14.0
+#   size: 14.0
 
 # font:
 #   normal:
@@ -142,19 +142,19 @@ font:
 
 # font:
 #   normal:
-#     family: Fira Mono
+#     family: FiraCode Nerd Font Mono
 #     style: Regular
 
 #   bold:
-#     family: Fira Mono
-#     style: Bold
+#     family: FiraCode Nerd Font Mono
+#     style: medium
 
 #   italic:
-#     family: Fira Mono
+#     family: FiraCode Nerd Font Mono
 #     style: Italic
 
 #   bold_italic:
-#     family: Fira Mono
+#     family: FiraCode Nerd Font Mono
 #     style: Bold
 
 #   size: 12.0
@@ -178,24 +178,24 @@ font:
 
 #   size: 13.0
 
-# font:
-#   normal:
-#     family: JetBrainsMono Nerd Font
-#     style: Regular
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
 
-#   bold:
-#     family: JetBrainsMono Nerd Font
-#     style: Bold
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: medium
 
-#   italic:
-#     family: JetBrainsMono Nerd Font
-#     style: Italic
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
 
-#   bold_italic:
-#     family: JetBrainsMono Nerd Font
-#     style: Bold Italic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
 
-  # size: 12.0
+  size: 12.0
 
   # offset:
   #   x: 0
