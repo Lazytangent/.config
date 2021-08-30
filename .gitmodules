@@ -4,3 +4,6 @@
 [submodule "helix"]
 	path = helix
 	url = git@github.com:Lazytangent/helix-conf.git
+[submodule "lite-xl"]
+	path = lite-xl
+	url = git@github.com:Lazytangent/lite-xl-config.git
