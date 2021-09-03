@@ -1,3 +1,15 @@
 [Editor]
-FontFamily = "Iosevka Nerd Font Mono"
+# FontFamily = "Iosevka Nerd Font Mono"
+FontFamily = "Hack Nerd Font"
 FontSize = 12
+# SmoothScroll = true
+IndentGuide = true
+# BorderlessWindow = true
+Gap = 2
+DisableLigatures = false
+
+[Sidebar]
+# Visible = true
+
+[Workspace]
+# PathStyle = "name"
