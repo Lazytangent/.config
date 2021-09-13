@@ -10,11 +10,15 @@ $git_status\
 $docker_context\
 $package\
 $cmake\
+$elixir\
 $golang\
 $java\
 $kotlin\
+$lua\
 $nodejs\
 $python\
+$ruby\
+$rust\
 $swift\
 $aws\
 $gcloud\
