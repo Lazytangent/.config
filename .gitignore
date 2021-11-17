@@ -5,3 +5,6 @@ moonlight.vim
 spotify-tui
 pgcli
 gh
+.mono
+Microsoft*
+xbuild
