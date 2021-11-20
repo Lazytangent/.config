@@ -1,0 +1,17 @@
+session_name: python
+start_directory: ~/Documents/Python/
+windows:
+  - window_name: base
+    panes:
+      - shell_command:
+        - l
+  - window_name: sqlalchemy
+    start_directory: SQLAlchemy
+    panes:
+      - shell_command:
+        - l
+  - window_name: flask-sqlalchemy
+    start_directory: Flask-SQLAlchemy
+    panes:
+      - shell_command:
+        - l
