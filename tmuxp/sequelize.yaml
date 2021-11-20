@@ -3,4 +3,6 @@ start_directory: ~/Documents/JavaScript/Sequelize
 windows:
 - window_name: notes
   focus: true
+  start_directory: Notes
 - window_name: practices
+  start_directory: Practices
