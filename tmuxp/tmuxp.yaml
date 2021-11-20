@@ -1,0 +1,4 @@
+session_name: tmuxp
+start_directory: ~/.config/tmuxp
+windows:
+- window_name: main
