@@ -1,0 +1,6 @@
+session_name: sequelize
+start_directory: ~/Documents/JavaScript/Sequelize
+windows:
+- window_name: notes
+  focus: true
+- window_name: practices
