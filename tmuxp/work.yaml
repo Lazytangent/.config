@@ -1,0 +1,14 @@
+session_name: work
+start_directory: ~/Documents/AppAcademyWork
+windows:
+  - window_name: work
+    panes:
+      -
+  - window_name: revised-curriculum
+    start_directory: Projects/revised-curriculum/react-2021
+    panes:
+      -
+  - window_name: modular
+    start_directory: Projects/Modular
+    panes:
+      -
