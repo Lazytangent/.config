@@ -5,8 +5,10 @@ windows:
     focus: True
     start_directory: Orangez
     panes:
-      - start_directory: backend
-      - start_directory: frontend
+      - shell_command:
+        - cd ./backend
+      - shell_command:
+        - cd ./frontend
   - window_name: backend
     start_directory: Orangez/backend
     panes:
