@@ -1,12 +1,23 @@
 session_name: orangez
 start_directory: ~/Documents/PersonalProjects/Orangez/
 windows:
-- window_name: servers
-  focus: True
-  layout: main-horizontal
-  panes:
-  - focus: True
-    start_directory: backend
-- window_name: backend
-  panes:
-  - start_directory: backend
+  - window_name: servers
+    focus: True
+    layout: main-horizontal
+    start_directory: Orangez
+    panes:
+      - focus: True
+        start_directory: backend
+      - start_directory: frontend
+  - window_name: backend
+    start_directory: Orangez/backend
+    panes:
+      -
+  - window_name: frontend
+    start_directory: Orangez/frontend
+    panes:
+      -
+  - window_name: wiki
+    start_directory: wiki
+    panes:
+      -
