@@ -3,11 +3,9 @@ start_directory: ~/Documents/PersonalProjects/Orangez/
 windows:
   - window_name: servers
     focus: True
-    layout: main-horizontal
     start_directory: Orangez
     panes:
-      - focus: True
-        start_directory: backend
+      - start_directory: backend
       - start_directory: frontend
   - window_name: backend
     start_directory: Orangez/backend
