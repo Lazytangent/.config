@@ -16,3 +16,7 @@ windows:
     start_directory: TheJuiceBox/frontend
     panes:
       -
+  - window_name: wiki
+    start_directory: wiki
+    panes:
+      -
