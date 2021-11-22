@@ -1,0 +1,10 @@
+session_name: react
+start_directory: ~/Documents/React/
+windows:
+  - window_name: base
+    panes:
+      -
+  - window_name: nextjs
+    start_directory: NextJS
+    panes:
+      -
