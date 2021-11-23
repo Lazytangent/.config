@@ -1,0 +1,11 @@
+session_name: marblejs
+start_directory: ~/Documents/JavaScript/Marble/
+windows:
+  - window_name: notes
+    start_directory: Notes
+    panes:
+      -
+  - window_name: projects
+    start_directory: Projects
+    panes:
+      -
