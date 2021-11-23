@@ -8,3 +8,7 @@ windows:
     start_directory: NextJS
     panes:
       -
+  - window_name: remix
+    start_directory: Remix
+    panes:
+      -
