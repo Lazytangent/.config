@@ -1,0 +1,6 @@
+session_name: hammerspoon
+start_directory: ~/.hammerspoon
+windows:
+  - window_name: base
+    panes:
+      -
