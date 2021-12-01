@@ -1,0 +1,5 @@
+session_name: aoc
+start_directory: ~/Documents/AdventOfCode/
+windows:
+  - panes:
+    -
