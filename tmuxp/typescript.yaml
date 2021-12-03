@@ -1,0 +1,5 @@
+session_name: typescript
+start_directory: ~/Documents/TypeScript/
+windows:
+  - panes:
+    -
