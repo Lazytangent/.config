@@ -16,3 +16,6 @@
 [submodule "emacs"]
 	path = emacs
 	url = https://github.com/plexus/chemacs2.git
+[submodule "chemacs"]
+	path = chemacs
+	url = https://github.com/plexus/chemacs.git
