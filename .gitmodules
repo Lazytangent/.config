@@ -13,3 +13,6 @@
 [submodule "doom-emacs"]
 	path = doom-emacs
 	url = http://github.com/hlissner/doom-emacs
+[submodule "emacs"]
+	path = emacs
+	url = https://github.com/plexus/chemacs2.git
