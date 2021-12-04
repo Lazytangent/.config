@@ -12,7 +12,7 @@
 	url = git@github.com:Lazytangent/doom.git
 [submodule "doom-emacs"]
 	path = doom-emacs
-	url = http://github.com/hlissner/doom-emacs
+	url = https://github.com/hlissner/doom-emacs
 [submodule "emacs"]
 	path = emacs
 	url = https://github.com/plexus/chemacs2.git
