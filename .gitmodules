@@ -7,9 +7,6 @@
 [submodule "lite-xl"]
 	path = lite-xl
 	url = git@github.com:Lazytangent/lite-xl-config.git
-[submodule "emacs"]
-	path = emacs
-	url = git@github.com:hlissner/doom-emacs.git
 [submodule "doom"]
 	path = doom
 	url = git@github.com:Lazytangent/doom.git
