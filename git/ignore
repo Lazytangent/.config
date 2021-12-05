@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+tags
+*.zip
+autosave
+GPATH
+GTAGS
+GRTAGS
