@@ -10,12 +10,3 @@
 [submodule "doom"]
 	path = doom
 	url = git@github.com:Lazytangent/doom.git
-[submodule "doom-emacs"]
-	path = doom-emacs
-	url = https://github.com/hlissner/doom-emacs
-[submodule "emacs"]
-	path = emacs
-	url = https://github.com/plexus/chemacs2.git
-[submodule "chemacs"]
-	url = https://github.com/plexus/chemacs2.git
-	path = chemacs
