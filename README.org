@@ -1,0 +1,3 @@
+#+TITLE: =.config= Files
+
+Files that belong in the =$HOME/.config=
