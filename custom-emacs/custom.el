@@ -40,7 +40,7 @@
    ("C-x C-r" . helm-recentf)
    ("C-x i" . helm-imenu)
    ("C-x p" . helm-projects-history)
-   
+
    ("M-y" . helm-show-kill-ring)
    :map helm-map
    ("C-z" . helm-select-action)
@@ -87,6 +87,14 @@
 ;; Increase size of LaTeX fragment previews
 (plist-put org-format-latex-options :scale 2)
 
+;; Send autosave files to backup directory
+(setq
+ backup-by-copying t
+ backup-directory-alist
+ '(("." . "~/.config/doom/.saves"))
+ delete-old-versions t)
+
+;; Emacs settings
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
