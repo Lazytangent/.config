@@ -1,0 +1,6 @@
+session_name: monorepo
+start_directory: ~/monorepo/
+windows:
+  - window_name: root
+  - window_name: web
+    start_directory: ./web
