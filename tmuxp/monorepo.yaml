@@ -1,0 +1,8 @@
+session_name: monorepo
+start_directory: ~/VaultWorkRepos/monorepo/
+windows:
+  - window_name: root
+  - window_name: server
+    start_directory: ./server
+  - window_name: web
+    start_directory: ./web
