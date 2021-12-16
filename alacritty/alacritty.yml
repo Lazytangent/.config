@@ -1261,6 +1261,7 @@ key_bindings:
   - { key: Q,              mods: Command,                    action: Quit                  }
   - { key: W,              mods: Command,                    action: Quit                  }
   - { key: N,              mods: Command,                    action: SpawnNewInstance      }
+  - { key: N,              mods: Command|Shift,              action: CreateNewWindow       }
   - { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   - { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   - { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
