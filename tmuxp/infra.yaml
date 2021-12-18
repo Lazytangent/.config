@@ -1,0 +1,4 @@
+session_name: infra
+start_directory: ~/VaultWorkRepos/infra/
+windows:
+  - window_name: root
