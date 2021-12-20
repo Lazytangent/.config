@@ -6,3 +6,9 @@ windows:
     start_directory: ./server
   - window_name: web
     start_directory: ./web
+  - window_name: www
+    start_directory: ./web/www
+  - window_name: patient
+    start_directory: ./web/patient
+  - window_name: doctor
+    start_directory: ./web/doctor
