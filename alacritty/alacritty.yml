@@ -47,8 +47,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 5
-    y: 2
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -82,9 +82,9 @@ window:
   dynamic_title: true
 
   # Window class (Linux/BSD only):
-  #class:
+  class:
     # Application instance name
-    #instance: Alacritty
+    instance: Alacritty
     # General application class
     #general: Alacritty
 
@@ -141,24 +141,24 @@ window:
 
 #   size: 12.0
 
-# font:
-#   normal:
-#     family: FiraCode Nerd Font
-#     style: Regular
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
 
-#   bold:
-#     family: FiraCode Nerd Font
-#     style: medium
+  bold:
+    family: FiraCode Nerd Font
+    style: medium
 
-#   italic:
-#     family: FiraCode Nerd Font
-#     style: Italic
+  italic:
+    family: FiraCode Nerd Font
+    style: Italic
 
-#   bold_italic:
-#     family: FiraCode Nerd Font
-#     style: Bold
+  bold_italic:
+    family: FiraCode Nerd Font
+    style: Bold
 
-#   size: 12.0
+  size: 10.0
 
 # font:
 #   normal:
@@ -179,24 +179,24 @@ window:
 
 #   size: 13.0
 
-font:
-  normal:
-    family: JetBrainsMono Nerd Font
-    style: Regular
+# font:
+#   normal:
+#     family: JetBrainsMono Nerd Font
+#     style: Regular
 
-  bold:
-    family: JetBrainsMono Nerd Font
-    style: medium
+#   bold:
+#     family: JetBrainsMono Nerd Font
+#     style: medium
 
-  italic:
-    family: JetBrainsMono Nerd Font
-    style: Italic
+#   italic:
+#     family: JetBrainsMono Nerd Font
+#     style: Italic
 
-  bold_italic:
-    family: JetBrainsMono Nerd Font
-    style: Bold Italic
+#   bold_italic:
+#     family: JetBrainsMono Nerd Font
+#     style: Bold Italic
 
-  size: 12.0
+#   size: 12.0
 
 # font:
 #   normal:
@@ -354,35 +354,35 @@ colors:
 
   # TokyoNight Alacritty Colors - Night
   # Default colors
-  # primary:
-  #   background: '0x1a1b26'
-  #   foreground: '0xc0caf5'
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
-  # # Normal colors
-  # normal:
-  #   black:   '0x15161E'
-  #   red:     '0xf7768e'
-  #   green:   '0x9ece6a'
-  #   yellow:  '0xe0af68'
-  #   blue:    '0x7aa2f7'
-  #   magenta: '0xbb9af7'
-  #   cyan:    '0x7dcfff'
-  #   white:   '0xa9b1d6'
+  # Normal colors
+  normal:
+    black:   '0x15161E'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
 
-  # # Bright colors
-  # bright:
-  #   black:   '0x414868'
-  #   red:     '0xf7768e'
-  #   green:   '0x9ece6a'
-  #   yellow:  '0xe0af68'
-  #   blue:    '0x7aa2f7'
-  #   magenta: '0xbb9af7'
-  #   cyan:    '0x7dcfff'
-  #   white:   '0xc0caf5'
+  # Bright colors
+  bright:
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
 
-  # indexed_colors:
-  #   - { index: 16, color: '0xff9e64' }
-  #   - { index: 17, color: '0xdb4b4b' }
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
 
   # Moonlight Theme
   # primary:
@@ -412,40 +412,40 @@ colors:
   #   white:   '0xe6e8f0'
 
   # Catppuccin!
-  primary:
-      background: "0x1B1623"
-      foreground: "0xB9C4E3"
+  # primary:
+  #     background: "0x1B1623"
+  #     foreground: "0xB9C4E3"
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-      text: "0x221E2F"
-      cursor: "0xADD692"
+  # # Colors the cursor will use if `custom_cursor_colors` is true
+  # cursor:
+  #     text: "0x221E2F"
+  #     cursor: "0xADD692"
 
-  # Normal colors
-  normal:
-      black: "0x0E0C13"
-      red: "0xE28D8D"
-      green: "0xADD692"
-      yellow: "0xF0DC89"
-      blue: "0x84A5CB"
-      magenta: "0xAE9AD6"
-      cyan: "0xF0A8E4"
-      white: "0xF0F0F5"
+  # # Normal colors
+  # normal:
+  #     black: "0x0E0C13"
+  #     red: "0xE28D8D"
+  #     green: "0xADD692"
+  #     yellow: "0xF0DC89"
+  #     blue: "0x84A5CB"
+  #     magenta: "0xAE9AD6"
+  #     cyan: "0xF0A8E4"
+  #     white: "0xF0F0F5"
 
-  # Bright colors
-  bright:
-      black: "0x3E4058"
-      red: "0xE28D8D"
-      green: "0xADD692"
-      yellow: "0xF0DC89"
-      blue: "0x84A5CB"
-      magenta: "0xAE9AD6"
-      cyan: "0xF0A8E4"
-      white: "0xF0F0F5"
+  # # Bright colors
+  # bright:
+  #     black: "0x3E4058"
+  #     red: "0xE28D8D"
+  #     green: "0xADD692"
+  #     yellow: "0xF0DC89"
+  #     blue: "0x84A5CB"
+  #     magenta: "0xAE9AD6"
+  #     cyan: "0xF0A8E4"
+  #     white: "0xF0F0F5"
 
-  indexed_colors:
-      - { index: 16, color: "0xF0DC89" }
-      - { index: 17, color: "0xE28D8D" }
+  # indexed_colors:
+  #     - { index: 16, color: "0xF0DC89" }
+  #     - { index: 17, color: "0xE28D8D" }
 
   # Catppuccino Neon Latte
   # Default colors
@@ -778,10 +778,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /bin/zsh
-  args:
-    - --login
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - --login
 
 # Startup directory
 #
