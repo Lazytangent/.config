@@ -1,0 +1,11 @@
+session_name: mathematics
+start_directory: ~/Documents/Mathematics/
+windows:
+  - window_name: main
+    start_directory: ./
+  - window_name: pdfs
+    start_directory: ./PDFs
+  - window_name: Org
+    start_directory: ./org
+  - window_name: TeX
+    start_directory: ./tex
