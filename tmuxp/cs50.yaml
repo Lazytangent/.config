@@ -1,0 +1,5 @@
+session_name: cs50
+start_directory: ~/Documents/Programming/cs50-2021/
+windows:
+  - window_name: base
+    start_directory: ./cs50x
