@@ -1,5 +1,5 @@
 session_name: juicebox
-start_directory: ~/Documents/PersonalProjects/juicebox/
+start_directory: ~/Documents/PersonalProjects/JuiceBox/project
 windows:
   - window_name: servers
     start_directory: TheJuiceBox
@@ -9,14 +9,8 @@ windows:
       - shell_command:
           - cd ./frontend
   - window_name: backend
-    start_directory: TheJuiceBox/backend
-    panes:
-      -
+    start_directory: backend
   - window_name: frontend
-    start_directory: TheJuiceBox/frontend
-    panes:
-      -
+    start_directory: frontend
   - window_name: wiki
-    start_directory: wiki
-    panes:
-      -
+    start_directory: ../wiki
