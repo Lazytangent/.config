@@ -2,7 +2,6 @@ session_name: juicebox
 start_directory: ~/Documents/PersonalProjects/JuiceBox/project
 windows:
   - window_name: servers
-    start_directory: TheJuiceBox
     panes:
       - shell_command:
           - cd ./backend
