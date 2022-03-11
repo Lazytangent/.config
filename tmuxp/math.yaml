@@ -1,0 +1,11 @@
+session_name: math
+start_directory: ~/Documents/mathematics/
+windows:
+  - window_name: PDFs
+    start_directory: ./PDFs
+  - window_name: Notes-root
+    start_directory: ./Notes
+  - window_name: linear-algebra
+    start_directory: ./Notes/Linear_Algebra
+  - window_name: calculus
+    start_directory: ./Notes/single_variable_calculus

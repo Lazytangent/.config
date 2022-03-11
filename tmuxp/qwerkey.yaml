@@ -1,20 +1,12 @@
 session_name: qwerkey
-start_directory: ~/Documents/PersonalProjects/qwerkey
+start_directory: ~/Documents/PersonalProjects/Qwerkey/project
 windows:
   - window_name: servers
-    start_directory: Qwerkey
     panes:
       -
-      - start_directory: frontend
+      -
   - window_name: backend
-    start_directory: Qwerkey
-    panes:
-      -
   - window_name: frontend
-    start_directory: Qwerkey/react-app
-    panes:
-      -
+    start_directory: react-app
   - window_name: wiki
-    start_directory: wiki
-    panes:
-      -
+    start_directory: ../wiki

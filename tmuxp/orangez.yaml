@@ -1,23 +1,18 @@
 session_name: orangez
-start_directory: ~/Documents/PersonalProjects/Orangez/
+start_directory: ~/Documents/PersonalProjects/Orangez/project
 windows:
   - window_name: servers
     focus: True
-    start_directory: Orangez
     panes:
       - shell_command:
         - cd ./backend
       - shell_command:
         - cd ./frontend
   - window_name: backend
-    start_directory: Orangez/backend
+    start_directory: backend
     panes:
       -
   - window_name: frontend
-    start_directory: Orangez/frontend
-    panes:
-      -
-  - window_name: wiki
-    start_directory: wiki
+    start_directory: frontend
     panes:
       -

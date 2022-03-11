@@ -1,0 +1,4 @@
+session_name: go
+start_directory: ~/Documents/Programming/Go/
+windows:
+  - window_name: main

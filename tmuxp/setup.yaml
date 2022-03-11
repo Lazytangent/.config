@@ -1,0 +1,4 @@
+session_name: setup
+start_directory: ~/Documents/PersonalProjects/Setup/
+windows:
+  - window_name: main
