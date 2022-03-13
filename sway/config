@@ -1,0 +1,23 @@
+set $mod   Mod4
+
+set $left  h
+set $down  j
+set $up    k
+set $right l
+
+set $term kitty
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_BLue_1920x1080.png fill
+
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec $menu
+
+floating_modifier $mod normal
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit SwayWM?' -B 'Yes' 'No'
+
+input "type:keyboard" {
+    xkb_options ctrl:nocaps
+}
