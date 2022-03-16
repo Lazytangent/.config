@@ -1,6 +1,7 @@
 # vim: ft=i3config
 
-set $mod   Mod4
+set $mod Mod4
+set $alt Mod1
 
 set $left  h
 set $down  j
@@ -72,8 +73,8 @@ bindsym $mod+f fullscreen
 
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $alt+Shift+minus move scratchpad
+bindsym $alt+minus scratchpad show
 
 mode "resize" {
     bindsym $left   resize shrink width   10px
