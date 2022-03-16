@@ -16,10 +16,15 @@ bindsym $mod+d exec $menu
 
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit SwayWM?' -B 'Yes' 'No'
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit SwayWM?' -B 'Yes' 'swaymsg exit'
 
 input "type:keyboard" {
     xkb_options ctrl:nocaps
+}
+
+input "1267:12572:DELL097D:00_04F3:311C_Touchpad" {
+    natural_scroll enabled
+    tap enabled
 }
 
 bindsym $mod+$left focus left
@@ -75,6 +80,9 @@ mode "resize" {
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
