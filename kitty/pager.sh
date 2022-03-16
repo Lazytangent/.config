@@ -11,7 +11,14 @@ else
   AUTOCMD_TERMCLOSE_CMD="normal G"
 fi
 
-exec /opt/homebrew/bin/nvim 63<&0 0</dev/null \
+declare nvim
+if command -v nvim 1>/dev/null 2>&1; then
+  nvim=nvim
+else
+  nvim=/opt/homebrew/bin/nvim
+fi
+
+exec $nvim 63<&0 0</dev/null \
   -u NONE \
   -c "map <silent> q :qa!<CR>" \
   -c "set shell=bash scrollback=100000 termguicolors laststatus=0 clipboard+=unnamedplus" \
