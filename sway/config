@@ -1,3 +1,5 @@
+# vim: ft=i3config
+
 set $mod   Mod4
 
 set $left  h
@@ -7,8 +9,6 @@ set $right l
 
 set $term kitty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
-# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_BLue_1920x1080.png fill
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
@@ -27,14 +27,16 @@ input "1267:12572:DELL097D:00_04F3:311C_Touchpad" {
     tap enabled
 }
 
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
+bindsym $mod+a focus parent
+
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
 bindsym $mod+$right focus right
 
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
 bindsym $mod+Shift+$right move right
 
 bindsym $mod+1 workspace number 1
@@ -70,16 +72,14 @@ bindsym $mod+f fullscreen
 
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+a focus parent
-
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left   resize shrink width   10px
+    bindsym $down   resize grow   height  10px
+    bindsym $up     resize shrink height  10px
+    bindsym $right  resize grow   width   10px
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
