@@ -25,7 +25,7 @@ yabai -m config focus_follows_mouse          autoraise
 yabai -m config mouse_modifier               alt
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
-yabai -m config mouse_drop_action            swap
+yabai -m config mouse_drop_action            stack
 
 # window
 yabai -m config active_window_border_color   0xff775759
@@ -60,6 +60,6 @@ yabai -m rule --add app="^Finder$" manage=off
 
 # spacebar
 SPACEBAR_HEIGHT=$(spacebar -m config height)
-yabai -m config external_bar main:$SPACEBAR_HEIGHT:0
+yabai -m config external_bar main:"$SPACEBAR_HEIGHT":0
 
 echo "yabai configuration loaded.."

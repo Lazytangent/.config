@@ -1,4 +1,4 @@
-# vim: ft=bash
+# vim: ft=bash: foldmethod=marker
 
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
@@ -78,49 +78,47 @@
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
 
-:: default  : spacebar -m config background_color 0xff202020
-:: m1 @     : spacebar -m config background_color 0xee009900
-:: m2 @     : spacebar -m config background_color 0xee990000
+# Mode declarations {{{
+:: default  : ~/.config/spacebar/configs/skhd_spacebar_modes.sh default
+:: resize   : ~/.config/spacebar/configs/skhd_spacebar_modes.sh resize
+:: m2       : ~/.config/spacebar/configs/skhd_spacebar_modes.sh m2
 
 # switch modes (testing, for now)
-m1, m2      < cmd + alt - z ; default
-default, m2 < cmd + alt - x ; m1
-default, m1 < cmd + alt - c ; m2
+resize, m2      < cmd + alt - z ; default
+default, m2     < cmd + alt - x ; resize
+default, resize < cmd + alt - c ; m2
 
+# }}}
+
+# Default mappings {{{
 # focus window
-alt - h : yabai -m window --focus west  || yabai -m display --focus west
-alt - j : yabai -m window --focus south || yabai -m display --focus south
-alt - k : yabai -m window --focus north || yabai -m display --focus north
-alt - l : yabai -m window --focus east  || yabai -m display --focus east
+default, resize < alt - h : ~/.config/yabai/configs/focus.sh west
+default, resize < alt - j : ~/.config/yabai/configs/focus.sh south
+default, resize < alt - k : ~/.config/yabai/configs/focus.sh north
+default, resize < alt - l : ~/.config/yabai/configs/focus.sh east
 
 # swap managed window
-shift + alt - h : yabai -m window --swap west  || yabai -m window --display west
-shift + alt - j : yabai -m window --swap south || yabai -m window --display south
-shift + alt - k : yabai -m window --swap north || yabai -m window --display north
-shift + alt - l : yabai -m window --swap east  || yabai -m window --display east
-
-# make floating window fill screen
-shift + alt - up  : yabai -m window --grid 1:1:0:0:1:1
-
-# make floating window fill left-half of screen
-shift + alt - left : yabai -m window --grid 1:2:0:0:1:1
+cmd + alt - h : ~/.config/yabai/configs/swap.sh west
+cmd + alt - j : ~/.config/yabai/configs/swap.sh south
+cmd + alt - k : ~/.config/yabai/configs/swap.sh north
+cmd + alt - l : ~/.config/yabai/configs/swap.sh east
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-shift + cmd - n : yabai -m space --create && \
-                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                  yabai -m window --space "${index}" && \
-                  yabai -m space --focus "${index}"
+cmd + alt - n : yabai -m space --create && \
+                index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                yabai -m window --space "${index}" && \
+                yabai -m space --focus "${index}"
 
 # fast focus desktop
-shift + alt - x : yabai -m space --focus recent
-shift + alt - 1 : yabai -m space --focus 1
-shift + alt - 2 : yabai -m space --focus 2
-shift + alt - 3 : yabai -m space --focus 3
+alt - z : yabai -m space --focus recent
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
 
 # send window to desktop and follow focus
-shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
-shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
-shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
+alt + shift - z : yabai -m window --space next; yabai -m space --focus next
+alt + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+alt + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
 
 # throw window to desktop
 cmd + alt - z : yabai -m window --space prev
@@ -131,31 +129,19 @@ cmd + alt - 4 : yabai -m window --space 4
 cmd + alt - 5 : yabai -m window --space 5
 
 # focus monitor
-ctrl + alt - z  : yabai -m display --focus prev
-ctrl + alt - 1  : yabai -m display --focus 1
-ctrl + alt - 2  : yabai -m display --focus 2
-ctrl + alt - 3  : yabai -m display --focus 3
-ctrl + alt - 4  : yabai -m display --focus 4
-ctrl + alt - 5  : yabai -m display --focus 5
+alt + ctrl - z  : yabai -m display --focus prev
+alt + ctrl - 1  : yabai -m display --focus 1
+alt + ctrl - 2  : yabai -m display --focus 2
+alt + ctrl - 3  : yabai -m display --focus 3
+alt + ctrl - 4  : yabai -m display --focus 4
+alt + ctrl - 5  : yabai -m display --focus 5
 
 # send window to monitor and follow focus
-ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
-ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
-ctrl + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
-ctrl + cmd - 3  : yabai -m window --display 3; yabai -m display --focus 3
-ctrl + cmd - 4  : yabai -m window --display 4; yabai -m display --focus 4
-
-# increase window size
-ctrl + alt - h : yabai -m window --resize left:-20:0
-ctrl + alt - j : yabai -m window --resize bottom:0:20
-ctrl + alt - k : yabai -m window --resize top:0:-20
-ctrl + alt - l : yabai -m window --resize right:20:0
-
-# decrease window size
-shift + ctrl + alt - h : yabai -m window --resize left:20:0
-shift + ctrl + alt - j : yabai -m window --resize bottom:0:-20
-shift + ctrl + alt - k : yabai -m window --resize top:0:20
-shift + ctrl + alt - l : yabai -m window --resize right:-20:0
+cmd + ctrl - c  : yabai -m window --display next; yabai -m display --focus next
+cmd + ctrl - 1  : yabai -m window --display 1; yabai -m display --focus 1
+cmd + ctrl - 2  : yabai -m window --display 2; yabai -m display --focus 2
+cmd + ctrl - 3  : yabai -m window --display 3; yabai -m display --focus 3
+cmd + ctrl - 4  : yabai -m window --display 4; yabai -m display --focus 4
 
 # toggle window zoom
 alt - d : yabai -m window --toggle zoom-parent
@@ -168,16 +154,40 @@ alt - e : yabai -m window --toggle split
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
+# make floating window fill screen
+alt + shift - up  : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+alt + shift - left : yabai -m window --grid 1:2:0:0:1:1
+
 # resize ratio
 cmd + alt - 0x2B  : yabai -m window --ratio rel:-0.05
 cmd + alt - 0x2F  : yabai -m window --ratio rel:0.05
 cmd + alt - 0     : yabai -m space --balance
 
 # applications
-ctrl + alt + cmd - 0x2C : open /Applications/Emacs.app
+cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
+cmd - return            : kitty
 
 # restart yabai or skhd
 alt - r : brew services restart skhd
 alt + cmd - r : brew services restart yabai
 alt + cmd + ctrl - r : brew services restart spacebar
 alt + cmd - d : yabai -m space --destroy
+
+# }}}
+
+# Resize mode mappings {{{
+
+resize < h : yabai -m window --resize left:-20:0
+resize < j : yabai -m window --resize bottom:0:20
+resize < k : yabai -m window --resize top:0:-20
+resize < l : yabai -m window --resize right:20:0
+
+# decrease window size
+resize < shift - h : yabai -m window --resize left:20:0
+resize < shift - j : yabai -m window --resize bottom:0:-20
+resize < shift - k : yabai -m window --resize top:0:20
+resize < shift - l : yabai -m window --resize right:-20:0
+
+# }}}

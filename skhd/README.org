@@ -1,0 +1,182 @@
+#+title: SKHD Keybinds
+* Active
+** No Mods
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd=
+
+| Key   | Functionality |
+|-------+---------------|
+| Enter | Launch Kitty  |
+** Mods: =alt=
+
+| Key | Functionality                  |
+|-----+--------------------------------|
+| h   | Focus left                     |
+| j   | Focus down                     |
+| k   | Focus up                       |
+| l   | Focus right                    |
+| z   | Focus recent                   |
+| d   | Toggles Zoom-parent            |
+| f   | Toggles Zoom-fullscreen        |
+| e   | Toggles Split                  |
+| t   | Toggles Float and Center       |
+| r   | Restart skhd                   |
+| <N> | Focus space/desktop number <N> |
+|     |                                |
+** Mods: =ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+alt=
+
+| Key | Functionality                                |
+|-----+----------------------------------------------|
+| h   | Swap left                                    |
+| j   | Swap down                                    |
+| k   | Swap up                                      |
+| l   | Swap right                                   |
+| n   | Throw to new desktop/space and follow        |
+| z   | Throw to recent desktop/space and follow     |
+| <N> | Throw to space/desktop number <N> and follow |
+| ,   | Decrease main window's ratio                 |
+| .   | Increase main window's ratio                 |
+| 0   | Reset ratio                                  |
+| r   | Restart yabai                                |
+| d   | Destroy space/desktop                        |
+|     |                                              |
+** Mods: =cmd+ctrl=
+
+| Key | Functionality                                 |
+|-----+-----------------------------------------------|
+| c   | Throw window to next monitor and follow       |
+| <N> | Throw window to monitor number <N> and follow |
+** Mods: =cmd+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+ctrl=
+
+| Key | Functionality            |
+|-----+--------------------------|
+| z   | Focus previous monitor   |
+| <N> | Focus monitor number <N> |
+** Mods: =alt+shift=
+
+| Key  | Functionality                                       |
+|------+-----------------------------------------------------|
+| z    | Throw window to next space/desktop and follow       |
+| <N>  | Throw window to space/desktop number <N> and follow |
+| Up   | Float window: fill screen                           |
+| Left | Float window: left half of screen                   |
+|      |                                                     |
+** Mods: =ctrl+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+ctrl+alt=
+
+| Key | Functionality    |
+|-----+------------------|
+| r   | Restart spacebar |
+| /   | Open Emacs       |
+** Mods: =alt+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+
+* Resize
+** No Mods
+
+| Key | Functionality      |
+|-----+--------------------|
+| h   | Increase on left   |
+| j   | Increase on bottom |
+| k   | Increase on top    |
+| l   | Increase on right  |
+|     |                    |
+** Mods: =cmd=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =shift=
+
+| Key | Functionality      |
+|-----+--------------------|
+| h   | Decrease on left   |
+| j   | Decrease on bottom |
+| k   | Decrease on top    |
+| l   | Decrease on right  |
+|     |                    |
+** Mods: =cmd+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
