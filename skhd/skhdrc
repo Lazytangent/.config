@@ -1,3 +1,5 @@
+# vim: ft=bash
+
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
 # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
@@ -77,31 +79,22 @@
 # ############################################################### #
 
 # focus window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west  || yabai -m display --focus west
+alt - j : yabai -m window --focus south || yabai -m display --focus south
+alt - k : yabai -m window --focus north || yabai -m display --focus north
+alt - l : yabai -m window --focus east  || yabai -m display --focus east
 
 # swap managed window
-# shift + alt - h : yabai -m window --swap west
-# shift + alt - j : yabai -m window --swap south
-# shift + alt - k : yabai -m window --swap north
-# shift + alt - l : yabai -m window --swap east
-
-# warp managed window
-shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
-shift + alt - k : yabai -m window --warp north
-shift + alt - l : yabai -m window --warp east
-
-# balance size of windows
-shift + alt - 0 : yabai -m space --balance
+shift + alt - h : yabai -m window --swap west  || yabai -m window --display west
+shift + alt - j : yabai -m window --swap south || yabai -m window --display south
+shift + alt - k : yabai -m window --swap north || yabai -m window --display north
+shift + alt - l : yabai -m window --swap east  || yabai -m window --display east
 
 # make floating window fill screen
-shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+shift + alt - up  : yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
-# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+shift + alt - left : yabai -m window --grid 1:2:0:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 shift + cmd - n : yabai -m space --create && \
@@ -110,27 +103,38 @@ shift + cmd - n : yabai -m space --create && \
                   yabai -m space --focus "${index}"
 
 # fast focus desktop
-cmd + alt - x : yabai -m space --focus recent
-cmd + alt - 1 : yabai -m space --focus 1
-cmd + alt - 2 : yabai -m space --focus 2
-cmd + alt - 3 : yabai -m space --focus 3
+shift + alt - x : yabai -m space --focus recent
+shift + alt - 1 : yabai -m space --focus 1
+shift + alt - 2 : yabai -m space --focus 2
+shift + alt - 3 : yabai -m space --focus 3
 
 # send window to desktop and follow focus
 shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
 shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
 shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
 
+# throw window to desktop
+cmd + alt - z : yabai -m window --space prev
+cmd + alt - 1 : yabai -m window --space 1
+cmd + alt - 2 : yabai -m window --space 2
+cmd + alt - 3 : yabai -m window --space 3
+cmd + alt - 4 : yabai -m window --space 4
+cmd + alt - 5 : yabai -m window --space 5
+
 # focus monitor
-# ctrl + alt - z  : yabai -m display --focus prev
-# ctrl + alt - 3  : yabai -m display --focus 3
+ctrl + alt - z  : yabai -m display --focus prev
+ctrl + alt - 1  : yabai -m display --focus 1
+ctrl + alt - 2  : yabai -m display --focus 2
+ctrl + alt - 3  : yabai -m display --focus 3
+ctrl + alt - 4  : yabai -m display --focus 4
+ctrl + alt - 5  : yabai -m display --focus 5
 
 # send window to monitor and follow focus
 ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
 ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
-
-# move floating window
-# shift + ctrl - a : yabai -m window --move rel:-20:0
-# shift + ctrl - s : yabai -m window --move rel:0:20
+ctrl + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
+ctrl + cmd - 3  : yabai -m window --display 3; yabai -m display --focus 3
+ctrl + cmd - 4  : yabai -m window --display 4; yabai -m display --focus 4
 
 # increase window size
 ctrl + alt - h : yabai -m window --resize left:-20:0
@@ -139,11 +143,10 @@ ctrl + alt - k : yabai -m window --resize top:0:-20
 ctrl + alt - l : yabai -m window --resize right:20:0
 
 # decrease window size
-# shift + cmd - s : yabai -m window --resize bottom:0:-20
-# shift + cmd - w : yabai -m window --resize top:0:20
-
-# set insertion point in focused container
-# ctrl + alt - h : yabai -m window --insert west
+shift + ctrl + alt - h : yabai -m window --resize left:20:0
+shift + ctrl + alt - j : yabai -m window --resize bottom:0:-20
+shift + ctrl + alt - k : yabai -m window --resize top:0:20
+shift + ctrl + alt - l : yabai -m window --resize right:-20:0
 
 # toggle window zoom
 alt - d : yabai -m window --toggle zoom-parent
@@ -156,7 +159,16 @@ alt - e : yabai -m window --toggle split
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
-# toggle sticky(+float), topmost, picture-in-picture
-# alt - p : yabai -m window --toggle sticky;\
-#           yabai -m window --toggle topmost;\
-#           yabai -m window --toggle pip
+# resize ratio
+cmd + alt - 0x2B  : yabai -m window --ratio rel:-0.05
+cmd + alt - 0x2F  : yabai -m window --ratio rel:0.05
+cmd + alt - 0     : yabai -m space --balance
+
+# applications
+ctrl + alt + cmd - 0x2C : open /Applications/Emacs.app
+
+# restart yabai or skhd
+alt - r : brew services restart skhd
+alt + cmd - r : brew services restart yabai
+alt + cmd + ctrl - r : brew services restart spacebar
+alt + cmd - d : yabai -m space --destroy
