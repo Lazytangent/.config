@@ -78,6 +78,15 @@
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
 
+:: default  : spacebar -m config background_color 0xff202020
+:: m1 @     : spacebar -m config background_color 0xee009900
+:: m2 @     : spacebar -m config background_color 0xee990000
+
+# switch modes (testing, for now)
+m1, m2      < cmd + alt - z ; default
+default, m2 < cmd + alt - x ; m1
+default, m1 < cmd + alt - c ; m2
+
 # focus window
 alt - h : yabai -m window --focus west  || yabai -m display --focus west
 alt - j : yabai -m window --focus south || yabai -m display --focus south
