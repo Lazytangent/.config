@@ -13,10 +13,23 @@ if which spacebar >/dev/null; then
       spacebar -m config center_shell           on
       spacebar -m config center_shell_command   'echo "[RESIZE MODE]"'
       ;;
-    m2)
+    passthrough)
       spacebar -m config background_color       0xffe0af68
-      spacebar -m config center_shell           off
-      spacebar -m config title                  on
+      spacebar -m config title                  off
+      spacebar -m config center_shell           on
+      spacebar -m config center_shell_command   'echo "[PASSTHROUGH MODE]"'
+      ;;
+    active)
+      spacebar -m config background_color       0xffbb9af7
+      spacebar -m config title                  off
+      spacebar -m config center_shell           on
+      spacebar -m config center_shell_command   'echo "[ACTIVE MODE]"'
+      ;;
+    layout)
+      spacebar -m config background_color       0xfff7768e
+      spacebar -m config title                  off
+      spacebar -m config center_shell           on
+      spacebar -m config center_shell_command   'echo "[LAYOUT MODE]"'
       ;;
   esac
 fi

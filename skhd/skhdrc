@@ -79,14 +79,25 @@
 # ############################################################### #
 
 # Mode declarations {{{
-:: default  : ~/.config/spacebar/configs/skhd_spacebar_modes.sh default
-:: resize   : ~/.config/spacebar/configs/skhd_spacebar_modes.sh resize
-:: m2       : ~/.config/spacebar/configs/skhd_spacebar_modes.sh m2
+:: default        : ~/.config/spacebar/configs/skhd_spacebar_modes.sh default
+:: resize       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh resize
+:: passthrough    : ~/.config/spacebar/configs/skhd_spacebar_modes.sh passthrough
+:: active       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh active
+:: layout       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh layout
 
 # switch modes (testing, for now)
-resize, m2      < cmd + alt - z ; default
-default, m2     < cmd + alt - x ; resize
-default, resize < cmd + alt - c ; m2
+default, passthrough, active  < cmd + alt - x ; resize
+default, passthrough, active  < f18           ; resize
+default, resize, active       < cmd + alt - m ; passthrough
+default, resize, active       < f19           ; passthrough
+default, resize, passthrough  < f17           ; active
+default, resize, passthrough  < cmd + alt - a ; active
+
+resize, passthrough, active   < cmd + alt - z ; default
+resize, passthrough, active   < escape        ; default
+passthrough                   < f19           ; default
+resize                        < f18           ; default
+active                        < f17           ; default
 
 # }}}
 
@@ -151,8 +162,8 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
-alt - t : yabai -m window --toggle float;\
-          yabai -m window --grid 4:4:1:1:2:2
+alt - t :  yabai -m window --toggle float;\
+                    yabai -m window --grid 4:4:1:1:2:2
 
 # make floating window fill screen
 alt + shift - up  : yabai -m window --grid 1:1:0:0:1:1
@@ -170,10 +181,30 @@ cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
 cmd - return            : kitty
 
 # restart yabai or skhd
-alt - r : brew services restart skhd
-alt + cmd - r : brew services restart yabai
+alt              - r : brew services restart skhd
+alt + cmd        - r : brew services restart yabai
 alt + cmd + ctrl - r : brew services restart spacebar
-alt + cmd - d : yabai -m space --destroy
+
+alt + cmd        - d : yabai -m space --destroy
+
+# }}}
+
+# Active mode mappings {{{
+
+# Switch modes
+active < l ; layout
+
+# }}}
+
+# Layout mode mappings {{{
+
+# Switch modes
+layout < escape ; active
+
+# space: toggle layout
+layout < b : yabai -m space --layout bsp
+layout < f : yabai -m space --layout float
+layout < s : yabai -m space --layout stack
 
 # }}}
 
