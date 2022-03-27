@@ -85,6 +85,7 @@
 :: active       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh active
 :: layout       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh layout
 :: normal       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh normal
+:: leader       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh leader
 
 # switch modes (testing, for now)
 default, passthrough, active  < cmd + alt - x ; resize
@@ -187,7 +188,7 @@ cmd + alt - 0     : yabai -m space --balance
 
 # applications
 cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
-cmd - return            : kitty
+alt - return            : kitty -d=$HOME
 
 # restart yabai or skhd
 alt              - r : brew services restart skhd
@@ -198,9 +199,31 @@ alt + cmd        - d : yabai -m space --destroy
 
 # }}}
 
+# Normal Mode mappings {{{
+
+normal < h : ~/.config/yabai/configs/focus.sh west
+normal < j : ~/.config/yabai/configs/focus.sh south
+normal < k : ~/.config/yabai/configs/focus.sh north
+normal < l : ~/.config/yabai/configs/focus.sh east
+
+normal < space ; leader
+
+## Leader: Space mappings {{{
+
+leader < alt - 0x21   ; normal
+leader < ctrl - g     ; normal
+leader < ctrl - 0x21  ; normal
+
+leader < l ; layout
+
+## }}}
+
+# }}}
+
 # Active mode mappings {{{
 
 # Switch modes
+
 active < l ; layout
 
 # }}}
@@ -208,7 +231,13 @@ active < l ; layout
 # Layout mode mappings {{{
 
 # Switch modes
-layout < escape ; active
+layout < escape       ; active
+layout < f17          ; active
+
+layout < ctrl - 0x21  ; normal
+layout < alt - 0x21   ; normal
+layout < escape       ; normal
+layout < ctrl - g     ; normal
 
 # space: toggle layout
 layout < b : yabai -m space --layout bsp

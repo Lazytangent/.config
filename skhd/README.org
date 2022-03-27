@@ -9,27 +9,28 @@
 
 | Key   | Functionality |
 |-------+---------------|
-| Enter | Launch Kitty  |
 ** Mods: =alt=
 
-| Key | Functionality                  |
-|-----+--------------------------------|
-| h   | Focus left                     |
-| j   | Focus down                     |
-| k   | Focus up                       |
-| l   | Focus right                    |
-| z   | Focus recent                   |
-| d   | Toggles Zoom-parent            |
-| f   | Toggles Zoom-fullscreen        |
-| e   | Toggles Split                  |
-| t   | Toggles Float and Center       |
-| r   | Restart skhd                   |
-| <N> | Focus space/desktop number <N> |
-|     |                                |
+| Key   | Functionality                  |
+|-------+--------------------------------|
+| h     | Focus left                     |
+| j     | Focus down                     |
+| k     | Focus up                       |
+| l     | Focus right                    |
+| z     | Focus recent                   |
+| d     | Toggles Zoom-parent            |
+| f     | Toggles Zoom-fullscreen        |
+| e     | Toggles Split                  |
+| t     | Toggles Float and Center       |
+| r     | Restart skhd                   |
+| <N>   | Focus space/desktop number <N> |
+| Enter | Launch Kitty                   |
+|       |                                |
 ** Mods: =ctrl=
 
 | Key | Functionality |
 |-----+---------------|
+|     |               |
 |     |               |
 ** Mods: =cmd+alt=
 
