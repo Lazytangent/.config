@@ -100,7 +100,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(helm-ls-git use-package helm exotica-theme evil)))
+ '(package-selected-packages
+   '(company which-key use-package helm-ls-git exotica-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
