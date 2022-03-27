@@ -31,5 +31,11 @@ if which spacebar >/dev/null; then
       spacebar -m config center_shell           on
       spacebar -m config center_shell_command   'echo "[LAYOUT MODE]"'
       ;;
+    normal)
+      spacebar -m config background_color       0xff0ece6a
+      spacebar -m config title                  off
+      spacebar -m config center_shell           on
+      spacebar -m config center_shell_command   'echo "[NORMAL MODE]"'
+      ;;
   esac
 fi

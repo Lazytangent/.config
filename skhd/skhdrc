@@ -84,6 +84,7 @@
 :: passthrough    : ~/.config/spacebar/configs/skhd_spacebar_modes.sh passthrough
 :: active       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh active
 :: layout       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh layout
+:: normal       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh normal
 
 # switch modes (testing, for now)
 default, passthrough, active  < cmd + alt - x ; resize
@@ -98,6 +99,14 @@ resize, passthrough, active   < escape        ; default
 passthrough                   < f19           ; default
 resize                        < f18           ; default
 active                        < f17           ; default
+
+## Vim-link modes {{{
+
+# Alt - [ to go into normal mode (like Ctrl - [)
+default < alt - 0x21 ; normal
+normal  < i ; default
+
+## }}}
 
 # }}}
 
