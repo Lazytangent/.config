@@ -79,13 +79,13 @@
 # ############################################################### #
 
 # Mode declarations {{{
-:: default        : ~/.config/spacebar/configs/skhd_spacebar_modes.sh default
-:: resize       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh resize
-:: passthrough    : ~/.config/spacebar/configs/skhd_spacebar_modes.sh passthrough
-:: active       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh active
-:: layout       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh layout
-:: normal       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh normal
-:: leader       @ : ~/.config/spacebar/configs/skhd_spacebar_modes.sh leader
+:: default        : skhd_spacebar_modes default
+:: resize       @ : skhd_spacebar_modes resize
+:: passthrough    : skhd_spacebar_modes passthrough
+:: active       @ : skhd_spacebar_modes active
+:: layout       @ : skhd_spacebar_modes layout
+:: normal       @ : skhd_spacebar_modes normal
+:: leader       @ : skhd_spacebar_modes leader
 
 # switch modes (testing, for now)
 default, passthrough, active  < cmd + alt - x ; resize
@@ -105,7 +105,9 @@ active                        < f17           ; default
 
 # Alt - [ to go into normal mode (like Ctrl - [)
 default < alt - 0x21 ; normal
-normal  < i ; default
+
+normal < i            ; default
+normal < ctrl - 0x21  ; default
 
 ## }}}
 
@@ -113,16 +115,16 @@ normal  < i ; default
 
 # Default mappings {{{
 # focus window
-default, resize < alt - h : ~/.config/yabai/configs/focus.sh west
-default, resize < alt - j : ~/.config/yabai/configs/focus.sh south
-default, resize < alt - k : ~/.config/yabai/configs/focus.sh north
-default, resize < alt - l : ~/.config/yabai/configs/focus.sh east
+default, resize < alt - h : focus west
+default, resize < alt - j : focus south
+default, resize < alt - k : focus north
+default, resize < alt - l : focus east
 
 # swap managed window
-cmd + alt - h : ~/.config/yabai/configs/swap.sh west
-cmd + alt - j : ~/.config/yabai/configs/swap.sh south
-cmd + alt - k : ~/.config/yabai/configs/swap.sh north
-cmd + alt - l : ~/.config/yabai/configs/swap.sh east
+cmd + alt - h : swap west
+cmd + alt - j : swap south
+cmd + alt - k : swap north
+cmd + alt - l : swap east
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 cmd + alt - n : yabai -m space --create && \
