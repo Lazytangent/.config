@@ -25,7 +25,8 @@
 | r     | Restart skhd                   |
 | <N>   | Focus space/desktop number <N> |
 | Enter | Launch Kitty                   |
-|       |                                |
+| n     | Focus next window in stack     |
+| p     | Focus prev window in stack     |
 ** Mods: =ctrl=
 
 | Key | Functionality |

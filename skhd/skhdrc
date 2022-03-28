@@ -79,13 +79,13 @@
 # ############################################################### #
 
 # Mode declarations {{{
-:: default        : skhd_spacebar_modes default
-:: resize       @ : skhd_spacebar_modes resize
-:: passthrough    : skhd_spacebar_modes passthrough
-:: active       @ : skhd_spacebar_modes active
-:: layout       @ : skhd_spacebar_modes layout
-:: normal       @ : skhd_spacebar_modes normal
-:: leader       @ : skhd_spacebar_modes leader
+:: default        : ~/.local/bin/skhd_spacebar_modes default
+:: resize       @ : ~/.local/bin/skhd_spacebar_modes resize
+:: passthrough    : ~/.local/bin/skhd_spacebar_modes passthrough
+:: active       @ : ~/.local/bin/skhd_spacebar_modes active
+:: layout       @ : ~/.local/bin/skhd_spacebar_modes layout
+:: normal       @ : ~/.local/bin/skhd_spacebar_modes normal
+:: leader       @ : ~/.local/bin/skhd_spacebar_modes leader
 
 # switch modes (testing, for now)
 default, passthrough, active  < cmd + alt - x ; resize
@@ -115,16 +115,19 @@ normal < ctrl - 0x21  ; default
 
 # Default mappings {{{
 # focus window
-default, resize < alt - h : focus west
-default, resize < alt - j : focus south
-default, resize < alt - k : focus north
-default, resize < alt - l : focus east
+default, resize < alt - h : ~/.local/bin/focus west
+default, resize < alt - j : ~/.local/bin/focus south
+default, resize < alt - k : ~/.local/bin/focus north
+default, resize < alt - l : ~/.local/bin/focus east
+
+alt - n : ~/.local/bin/focus next
+alt - p : ~/.local/bin/focus prev
 
 # swap managed window
-cmd + alt - h : swap west
-cmd + alt - j : swap south
-cmd + alt - k : swap north
-cmd + alt - l : swap east
+cmd + alt - h : ~/.local/bin/swap west
+cmd + alt - j : ~/.local/bin/swap south
+cmd + alt - k : ~/.local/bin/swap north
+cmd + alt - l : ~/.local/bin/swap east
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 cmd + alt - n : yabai -m space --create && \
