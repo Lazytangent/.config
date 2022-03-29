@@ -27,6 +27,9 @@
 | Enter | Launch Kitty               |
 | n     | Focus next window in stack |
 | p     | Focus prev window in stack |
+| b     | Layout: BSP                |
+| s     | Layout: Stack              |
+| o     | Layout: Float (Over)       |
 ** Mods: =ctrl=
 
 | Key | Functionality |
