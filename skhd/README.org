@@ -11,22 +11,22 @@
 |-------+---------------|
 ** Mods: =alt=
 
-| Key   | Functionality                  |
-|-------+--------------------------------|
-| h     | Focus left                     |
-| j     | Focus down                     |
-| k     | Focus up                       |
-| l     | Focus right                    |
-| z     | Focus recent                   |
-| d     | Toggles Zoom-parent            |
-| f     | Toggles Zoom-fullscreen        |
-| e     | Toggles Split                  |
-| t     | Toggles Float and Center       |
-| r     | Restart skhd                   |
-| <N>   | Focus space/desktop number <N> |
-| Enter | Launch Kitty                   |
-| n     | Focus next window in stack     |
-| p     | Focus prev window in stack     |
+| Key   | Functionality              |
+|-------+----------------------------|
+| h     | Focus left                 |
+| j     | Focus down                 |
+| k     | Focus up                   |
+| l     | Focus right                |
+| z     | Focus recent display       |
+| d     | Toggles Zoom-parent        |
+| f     | Toggles Zoom-fullscreen    |
+| e     | Toggles Split              |
+| t     | Toggles Float and Center   |
+| r     | Restart skhd               |
+| <N>   | Focus display number <N>   |
+| Enter | Launch Kitty               |
+| n     | Focus next window in stack |
+| p     | Focus prev window in stack |
 ** Mods: =ctrl=
 
 | Key | Functionality |
@@ -77,7 +77,8 @@
 | <N>  | Throw window to space/desktop number <N> and follow |
 | Up   | Float window: fill screen                           |
 | Left | Float window: left half of screen                   |
-|      |                                                     |
+| h    | Throw to prev space                                 |
+| l    | Throw to next space                                 |
 ** Mods: =ctrl+shift=
 
 | Key | Functionality |
@@ -220,13 +221,13 @@
 | Esc | Return to active mode  |
 ** Mods: =cmd=
 
-| Key   | Functionality |
-|-------+---------------|
+| Key | Functionality |
+|-----+---------------|
 ** Mods: =alt=
 
-| Key | Functionality                  |
-|-----+--------------------------------|
-|     |                                |
+| Key | Functionality |
+|-----+---------------|
+|     |               |
 ** Mods: =ctrl=
 
 | Key | Functionality |
@@ -234,13 +235,13 @@
 |     |               |
 ** Mods: =cmd+alt=
 
-| Key | Functionality                                |
-|-----+----------------------------------------------|
+| Key | Functionality |
+|-----+---------------|
 ** Mods: =cmd+ctrl=
 
-| Key | Functionality                                 |
-|-----+-----------------------------------------------|
-|     |                                               |
+| Key | Functionality |
+|-----+---------------|
+|     |               |
 ** Mods: =cmd+shift=
 
 | Key | Functionality |
@@ -248,9 +249,9 @@
 |     |               |
 ** Mods: =alt+ctrl=
 
-| Key | Functionality            |
-|-----+--------------------------|
-|     |                          |
+| Key | Functionality |
+|-----+---------------|
+|     |               |
 ** Mods: =alt+shift=
 
 | Key | Functionality |
@@ -316,6 +317,153 @@
 | k   | Decrease on top    |
 | l   | Decrease on right  |
 |     |                    |
+** Mods: =cmd+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+
+* Normal
+** No Mods
+
+| Key | Functionality |
+|-----+---------------|
+| h   | Focus left    |
+| j   | Focus down    |
+| k   | Focus up      |
+| l   | Focus right   |
+| SPC | Leader Mode   |
+** Mods: =cmd=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl+shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =cmd+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt+shift+ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+* Leader Mode
+** No Mods
+
+| Key | Functionality |
+|-----+---------------|
+| l   | Layout Mode   |
+** Mods: =cmd=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =alt=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =ctrl=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
+** Mods: =shift=
+
+| Key | Functionality |
+|-----+---------------|
+|     |               |
 ** Mods: =cmd+alt=
 
 | Key | Functionality |

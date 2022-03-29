@@ -136,15 +136,20 @@ cmd + alt - n : yabai -m space --create && \
                 yabai -m space --focus "${index}"
 
 # fast focus desktop
-alt - z : yabai -m space --focus recent
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
+alt - z : yabai -m display --focus recent
+alt - 1 : yabai -m display --focus 1
+alt - 2 : yabai -m display --focus 2
+alt - 3 : yabai -m display --focus 3
+alt - 4 : yabai -m display --focus 4
+alt - 5 : yabai -m display --focus 5
 
 # send window to desktop and follow focus
 alt + shift - z : yabai -m window --space next; yabai -m space --focus next
 alt + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
 alt + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+
+alt + shift - h : ~/.local/bin/throw space prev
+alt + shift - l : ~/.local/bin/throw space next
 
 # throw window to desktop
 cmd + alt - z : yabai -m window --space prev
@@ -219,7 +224,9 @@ leader < alt - 0x21   ; normal
 leader < ctrl - g     ; normal
 leader < ctrl - 0x21  ; normal
 
+leader < a ; active
 leader < l ; layout
+leader < r ; resize
 
 ## }}}
 
@@ -236,12 +243,10 @@ active < l ; layout
 # Layout mode mappings {{{
 
 # Switch modes
-layout < escape       ; active
 layout < f17          ; active
 
 layout < ctrl - 0x21  ; normal
 layout < alt - 0x21   ; normal
-layout < escape       ; normal
 layout < ctrl - g     ; normal
 
 # space: toggle layout
@@ -252,6 +257,10 @@ layout < s : yabai -m space --layout stack
 # }}}
 
 # Resize mode mappings {{{
+
+resize < ctrl - 0x21  ; normal
+resize < escape       ; normal
+resize < alt - 0x21   ; normal
 
 resize < h : yabai -m window --resize left:-20:0
 resize < j : yabai -m window --resize bottom:0:20
