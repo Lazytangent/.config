@@ -86,6 +86,7 @@
 :: layout       @ : ~/.local/bin/skhd_spacebar_modes layout
 :: normal       @ : ~/.local/bin/skhd_spacebar_modes normal
 :: leader       @ : ~/.local/bin/skhd_spacebar_modes leader
+:: emacs          : ~/.local/bin/skhd_spacebar_modes emacs
 
 # switch modes (testing, for now)
 default, passthrough, active  < cmd + alt - x ; resize
@@ -94,12 +95,15 @@ default, resize, active       < cmd + alt - m ; passthrough
 default, resize, active       < f19           ; passthrough
 default, resize, passthrough  < f17           ; active
 default, resize, passthrough  < cmd + alt - a ; active
+default                       < alt - x       ; emacs
 
 resize, passthrough, active   < cmd + alt - z ; default
 resize, passthrough, active   < escape        ; default
 passthrough                   < f19           ; default
 resize                        < f18           ; default
 active                        < f17           ; default
+
+emacs < cmd + ctrl + shift + alt - x ; default
 
 ## Vim-link modes {{{
 
