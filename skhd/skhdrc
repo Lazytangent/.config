@@ -173,7 +173,7 @@ alt + ctrl - 5  : yabai -m display --focus 5
 
 # send window to monitor and follow focus
 cmd + ctrl - c  : yabai -m window --display next; yabai -m display --focus next
-cmd + ctrl - 1  : yabai -m window --display 1; yabai -m display --focus 1
+cmd + ctrl - 0  : yabai -m window --display 1; yabai -m display --focus 1
 cmd + ctrl - 2  : yabai -m window --display 2; yabai -m display --focus 2
 cmd + ctrl - 3  : yabai -m window --display 3; yabai -m display --focus 3
 cmd + ctrl - 4  : yabai -m window --display 4; yabai -m display --focus 4
@@ -206,8 +206,8 @@ cmd + alt - 0x2F  : yabai -m window --ratio rel:0.05
 cmd + alt - 0     : yabai -m space --balance
 
 # applications
-cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
-alt - return            : kitty -d=$HOME
+default < cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
+default < alt - return            : kitty -d=$HOME
 
 # restart yabai or skhd
 alt              - r : brew services restart skhd
@@ -215,6 +215,11 @@ alt + cmd        - r : brew services restart yabai
 alt + cmd + ctrl - r : brew services restart spacebar
 
 alt + cmd        - d : yabai -m space --destroy
+
+# }}}
+
+# Emacs Mode {{{
+emacs < alt - return : open /Applications/Emacs.app
 
 # }}}
 
