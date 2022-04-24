@@ -98,7 +98,7 @@ default, resize, passthrough  < cmd + alt - a ; active
 default                       < alt - x       ; emacs
 
 resize, passthrough, active   < cmd + alt - z ; default
-resize, passthrough, active   < escape        ; default
+resize, active                < escape        ; default
 passthrough                   < f19           ; default
 resize                        < f18           ; default
 active                        < f17           ; default
