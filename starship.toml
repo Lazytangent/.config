@@ -38,9 +38,6 @@ format = "[$user]($style) "
 disabled = false
 time_format = "%a %d %h %Y %T"
 
-[git_branch]
-always_show_remote = true
-
 [directory]
 format = "in [$path]($style)[$read_only]($read_only_style) "
 
