@@ -42,8 +42,7 @@ time_format = "%a %d %h %Y %T"
 format = "in [$path]($style)[$read_only]($read_only_style) "
 
 [python]
-pyenv_version_name = true
-format = 'via [$symbol$pyenv_prefix($version)( \($virtualenv\))]($style) '
+format = 'via [$symbol($version)( \($virtualenv\))]($style) '
 
 [nodejs]
 format = "via [$symbol($version)]($style) "
