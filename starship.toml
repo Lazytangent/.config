@@ -1,30 +1,26 @@
 format = """
 $username\
 $hostname\
-$kubernetes\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
+$container\
 $docker_context\
 $package\
-$cmake\
 $elixir\
 $golang\
 $java\
-$kotlin\
 $lua\
 $nodejs\
 $python\
 $ruby\
 $rust\
 $swift\
+$terraform\
 $aws\
-$gcloud\
-$openstack\
-$nix_shell\
-$env_var\
+$azure\
 $cmd_duration\
 $jobs\
 $time\
@@ -42,18 +38,11 @@ format = "[$user]($style) "
 disabled = false
 time_format = "%a %d %h %Y %T"
 
-[git_branch]
-always_show_remote = true
-
-[kubernetes]
-disabled = false
-
 [directory]
 format = "in [$path]($style)[$read_only]($read_only_style) "
 
 [python]
-pyenv_version_name = true
-format = 'via [$symbol$pyenv_prefix($version)( \($virtualenv\))]($style) '
+format = 'via [$symbol($version)( \($virtualenv\))]($style) '
 
 [nodejs]
 format = "via [$symbol($version)]($style) "

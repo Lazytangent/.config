@@ -46,7 +46,7 @@
    ("C-z" . helm-select-action)
    ("<tab>" . helm-execute-persistent-action)))
 
-(require 'helm-ls-git)
+(use-package helm-ls-git)
 (global-set-key (kbd "C-x C-d") 'helm-browse-project)
 (global-set-key (kbd "C-x r p") 'helm-projects-history)
 
@@ -100,7 +100,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(helm evil exotica-theme use-package)))
+ '(package-selected-packages
+   '(company which-key use-package helm-ls-git exotica-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

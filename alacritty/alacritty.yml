@@ -15,14 +15,14 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 env:
-  TERM: xterm-256color
+  # TERM: xterm-256color
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: alacritty
+  TERM: alacritty
 
 window:
   # Window dimensions (changes require restart)
@@ -62,7 +62,8 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  # decorations: buttonless
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -141,24 +142,24 @@ window:
 
 #   size: 12.0
 
-# font:
-#   normal:
-#     family: FiraCode Nerd Font
-#     style: Regular
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
 
-#   bold:
-#     family: FiraCode Nerd Font
-#     style: medium
+  bold:
+    family: FiraCode Nerd Font
+    style: medium
 
-#   italic:
-#     family: FiraCode Nerd Font
-#     style: Italic
+  italic:
+    family: FiraCode Nerd Font
+    style: Italic
 
-#   bold_italic:
-#     family: FiraCode Nerd Font
-#     style: Bold
+  bold_italic:
+    family: FiraCode Nerd Font
+    style: Bold
 
-#   size: 12.0
+  size: 12.0
 
 # font:
 #   normal:
@@ -178,26 +179,6 @@ window:
 #     style: Bold Italic
 
 #   size: 13.0
-
-font:
-  normal:
-    family: JetBrainsMono Nerd Font
-    style: Regular
-
-  bold:
-    family: JetBrainsMono Nerd Font
-    style: medium
-
-  italic:
-    family: JetBrainsMono Nerd Font
-    style: Italic
-
-  bold_italic:
-    family: JetBrainsMono Nerd Font
-    style: Bold Italic
-
-  size: 12.0
-
 # font:
 #   normal:
 #     family: SF Mono
@@ -1265,6 +1246,7 @@ key_bindings:
   - { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   - { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   - { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
+  - { key: T,              mods: Command,                    action: CreateNewWindow       }
 
 # debug:
   # Display the time it takes to redraw each frame.

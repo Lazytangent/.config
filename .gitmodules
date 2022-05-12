@@ -10,3 +10,6 @@
 [submodule "doom"]
 	path = doom
 	url = git@github.com:Lazytangent/doom.git
+[submodule "vanillamacs"]
+	path = vanillamacs
+	url = git@github.com:Lazytangent/vanillamacs.git

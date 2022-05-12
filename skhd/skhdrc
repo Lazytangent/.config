@@ -1,0 +1,290 @@
+# vim: ft=bash: foldmethod=marker
+
+# ################################################################ #
+# THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
+# FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
+# ################################################################ #
+
+# A list of all built-in modifier and literal keywords can
+# be found at https://github.com/koekeishiya/skhd/issues/1
+#
+# A hotkey is written according to the following rules:
+#
+#   hotkey       = <mode> '<' <action> | <action>
+#
+#   mode         = 'name of mode' | <mode> ',' <mode>
+#
+#   action       = <keysym> '[' <proc_map_lst> ']' | <keysym> '->' '[' <proc_map_lst> ']'
+#                  <keysym> ':' <command>          | <keysym> '->' ':' <command>
+#                  <keysym> ';' <mode>             | <keysym> '->' ';' <mode>
+#
+#   keysym       = <mod> '-' <key> | <key>
+#
+#   mod          = 'modifier keyword' | <mod> '+' <mod>
+#
+#   key          = <literal> | <keycode>
+#
+#   literal      = 'single letter or built-in keyword'
+#
+#   keycode      = 'apple keyboard kVK_<Key> values (0x3C)'
+#
+#   proc_map_lst = * <proc_map>
+#
+#   proc_map     = <string> ':' <command> | <string>     '~' |
+#                  '*'      ':' <command> | '*'          '~'
+#
+#   string       = '"' 'sequence of characters' '"'
+#
+#   command      = command is executed through '$SHELL -c' and
+#                  follows valid shell syntax. if the $SHELL environment
+#                  variable is not set, it will default to '/bin/bash'.
+#                  when bash is used, the ';' delimeter can be specified
+#                  to chain commands.
+#
+#                  to allow a command to extend into multiple lines,
+#                  prepend '\' at the end of the previous line.
+#
+#                  an EOL character signifies the end of the bind.
+#
+#   ->           = keypress is not consumed by skhd
+#
+#   *            = matches every application not specified in <proc_map_lst>
+#
+#   ~            = application is unbound and keypress is forwarded per usual, when specified in a <proc_map>
+#
+# A mode is declared according to the following rules:
+#
+#   mode_decl = '::' <name> '@' ':' <command> | '::' <name> ':' <command> |
+#               '::' <name> '@'               | '::' <name>
+#
+#   name      = desired name for this mode,
+#
+#   @         = capture keypresses regardless of being bound to an action
+#
+#   command   = command is executed through '$SHELL -c' and
+#               follows valid shell syntax. if the $SHELL environment
+#               variable is not set, it will default to '/bin/bash'.
+#               when bash is used, the ';' delimeter can be specified
+#               to chain commands.
+#
+#               to allow a command to extend into multiple lines,
+#               prepend '\' at the end of the previous line.
+#
+#               an EOL character signifies the end of the bind.
+
+# ############################################################### #
+# THE FOLLOWING SECTION CONTAIN SIMPLE MAPPINGS DEMONSTRATING HOW #
+# TO INTERACT WITH THE YABAI WM. THESE ARE SUPPOSED TO BE USED AS #
+# A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
+# ############################################################### #
+
+# Mode declarations {{{
+:: default        : ~/.local/bin/skhd_spacebar_modes default
+:: resize       @ : ~/.local/bin/skhd_spacebar_modes resize
+:: passthrough    : ~/.local/bin/skhd_spacebar_modes passthrough
+:: active       @ : ~/.local/bin/skhd_spacebar_modes active
+:: layout       @ : ~/.local/bin/skhd_spacebar_modes layout
+:: normal       @ : ~/.local/bin/skhd_spacebar_modes normal
+:: leader       @ : ~/.local/bin/skhd_spacebar_modes leader
+:: emacs          : ~/.local/bin/skhd_spacebar_modes emacs
+
+# switch modes (testing, for now)
+default, passthrough, active  < cmd + alt - x ; resize
+default, passthrough, active  < f18           ; resize
+default, resize, active       < cmd + alt - m ; passthrough
+default, resize, active       < f19           ; passthrough
+default, resize, passthrough  < f17           ; active
+default, resize, passthrough  < cmd + alt - a ; active
+default                       < alt - x       ; emacs
+
+resize, passthrough, active   < cmd + alt - z ; default
+resize, active                < escape        ; default
+passthrough                   < f19           ; default
+resize                        < f18           ; default
+active                        < f17           ; default
+
+emacs < cmd + ctrl + shift + alt - x ; default
+
+## Vim-link modes {{{
+
+# Alt - [ to go into normal mode (like Ctrl - [)
+default < alt - 0x21 ; normal
+
+normal < i            ; default
+normal < ctrl - 0x21  ; default
+
+## }}}
+
+# }}}
+
+# Default mappings {{{
+# focus window
+default, resize < alt - h : ~/.local/bin/focus west
+default, resize < alt - j : ~/.local/bin/focus south
+default, resize < alt - k : ~/.local/bin/focus north
+default, resize < alt - l : ~/.local/bin/focus east
+
+alt - n : ~/.local/bin/focus next
+alt - p : ~/.local/bin/focus prev
+
+# swap managed window
+cmd + alt - h : ~/.local/bin/swap west
+cmd + alt - j : ~/.local/bin/swap south
+cmd + alt - k : ~/.local/bin/swap north
+cmd + alt - l : ~/.local/bin/swap east
+
+# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+cmd + alt - n : yabai -m space --create && \
+                index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                yabai -m window --space "${index}" && \
+                yabai -m space --focus "${index}"
+
+# fast focus desktop
+alt - z : yabai -m display --focus recent
+alt - 1 : yabai -m display --focus 1
+alt - 2 : yabai -m display --focus 2
+alt - 3 : yabai -m display --focus 3
+alt - 4 : yabai -m display --focus 4
+alt - 5 : yabai -m display --focus 5
+
+# send window to desktop and follow focus
+alt + shift - z : yabai -m window --space next; yabai -m space --focus next
+alt + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+alt + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+
+alt + shift - h : ~/.local/bin/throw space prev
+alt + shift - l : ~/.local/bin/throw space next
+
+# throw window to desktop
+cmd + alt - z : yabai -m window --space prev
+cmd + alt - 1 : yabai -m window --space 1
+cmd + alt - 2 : yabai -m window --space 2
+cmd + alt - 3 : yabai -m window --space 3
+cmd + alt - 4 : yabai -m window --space 4
+cmd + alt - 5 : yabai -m window --space 5
+
+# focus monitor
+alt + ctrl - z  : yabai -m display --focus prev
+alt + ctrl - 1  : yabai -m display --focus 1
+alt + ctrl - 2  : yabai -m display --focus 2
+alt + ctrl - 3  : yabai -m display --focus 3
+alt + ctrl - 4  : yabai -m display --focus 4
+alt + ctrl - 5  : yabai -m display --focus 5
+
+# send window to monitor and follow focus
+cmd + ctrl - c  : yabai -m window --display next; yabai -m display --focus next
+cmd + ctrl - 0  : yabai -m window --display 1; yabai -m display --focus 1
+cmd + ctrl - 2  : yabai -m window --display 2; yabai -m display --focus 2
+cmd + ctrl - 3  : yabai -m window --display 3; yabai -m display --focus 3
+cmd + ctrl - 4  : yabai -m window --display 4; yabai -m display --focus 4
+
+# rotate through layouts
+alt - b : yabai -m space --layout bsp
+alt - s : yabai -m space --layout stack
+alt - o : yabai -m space --layout float
+
+# toggle window zoom
+alt - d : yabai -m window --toggle zoom-parent
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window split type
+alt - e : yabai -m window --toggle split
+
+# float / unfloat window and center on screen
+alt - t :  yabai -m window --toggle float;\
+                    yabai -m window --grid 4:4:1:1:2:2
+
+# make floating window fill screen
+alt + shift - up  : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+alt + shift - left : yabai -m window --grid 1:2:0:0:1:1
+
+# resize ratio
+cmd + alt - 0x2B  : yabai -m window --ratio rel:-0.05
+cmd + alt - 0x2F  : yabai -m window --ratio rel:0.05
+cmd + alt - 0     : yabai -m space --balance
+
+# applications
+default < cmd + ctrl + alt - 0x2C : open /Applications/Emacs.app
+default < alt - return            : kitty -d=$HOME
+
+# restart yabai or skhd
+alt              - r : brew services restart skhd
+alt + cmd        - r : brew services restart yabai
+alt + cmd + ctrl - r : brew services restart spacebar
+
+alt + cmd        - d : yabai -m space --destroy
+
+# }}}
+
+# Emacs Mode {{{
+emacs < alt - return : open /Applications/Emacs.app
+
+# }}}
+
+# Normal Mode mappings {{{
+
+normal < h : ~/.config/yabai/configs/focus.sh west
+normal < j : ~/.config/yabai/configs/focus.sh south
+normal < k : ~/.config/yabai/configs/focus.sh north
+normal < l : ~/.config/yabai/configs/focus.sh east
+
+normal < space ; leader
+
+## Leader: Space mappings {{{
+
+leader < alt - 0x21   ; normal
+leader < ctrl - g     ; normal
+leader < ctrl - 0x21  ; normal
+
+leader < a ; active
+leader < l ; layout
+leader < r ; resize
+
+## }}}
+
+# }}}
+
+# Active mode mappings {{{
+
+# Switch modes
+
+active < l ; layout
+
+# }}}
+
+# Layout mode mappings {{{
+
+# Switch modes
+layout < f17          ; active
+
+layout < ctrl - 0x21  ; normal
+layout < alt - 0x21   ; normal
+layout < ctrl - g     ; normal
+
+# space: toggle layout
+layout < b : yabai -m space --layout bsp
+layout < f : yabai -m space --layout float
+layout < s : yabai -m space --layout stack
+
+# }}}
+
+# Resize mode mappings {{{
+
+resize < ctrl - 0x21  ; normal
+resize < escape       ; normal
+resize < alt - 0x21   ; normal
+
+resize < h : yabai -m window --resize left:-20:0
+resize < j : yabai -m window --resize bottom:0:20
+resize < k : yabai -m window --resize top:0:-20
+resize < l : yabai -m window --resize right:20:0
+
+# decrease window size
+resize < shift - h : yabai -m window --resize left:20:0
+resize < shift - j : yabai -m window --resize bottom:0:-20
+resize < shift - k : yabai -m window --resize top:0:20
+resize < shift - l : yabai -m window --resize right:-20:0
+
+# }}}
