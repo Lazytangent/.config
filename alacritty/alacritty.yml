@@ -22,7 +22,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -104,44 +104,6 @@ window:
   #multiplier: 3
 
 # Font configuration
-# font:
-#   normal:
-#     family: Inconsolata Nerd Font
-#     style: Regular
-
-#   bold:
-#     family: Inconsolata Nerd Font
-#     style: Bold
-
-#   italic:
-#     family: Inconsolata Nerd Font
-#     style: Italic
-
-#   bold_italic:
-#     family: Inconsolata Nerd Font
-#     style: Bold
-
-#   size: 14.0
-
-# font:
-#   normal:
-#     family: Hack Nerd Font
-#     style: Regular
-
-#   bold:
-#     family: Hack Nerd Font
-#     style: Bold
-
-#   italic:
-#     family: Hack Nerd Font
-#     style: Italic
-
-#   bold_italic:
-#     family: Hack Nerd Font
-#     style: Bold
-
-#   size: 12.0
-
 font:
   normal:
     family: FiraCode Nerd Font
@@ -160,43 +122,6 @@ font:
     style: Bold
 
   size: 12.0
-
-# font:
-#   normal:
-#     family: Iosevka Nerd Font Mono
-#     style: Regular
-
-#   bold:
-#     family: Iosevka Nerd Font Mono
-#     style: Bold
-
-#   italic:
-#     family: Iosevka Nerd Font Mono
-#     style: Italic
-
-#   bold_italic:
-#     family: Iosevka Nerd Font Mono
-#     style: Bold Italic
-
-#   size: 13.0
-# font:
-#   normal:
-#     family: SF Mono
-#     style: Regular
-
-#   bold:
-#     family: SF Mono
-#     style: medium
-
-#   italic:
-#     family: SF Mono
-#     style: Italic
-
-#   bold_italic:
-#     family: SF Mono
-#     style: Bold Italic
-
-#   size: 12.0
 
   # offset:
   #   x: 0
@@ -335,35 +260,35 @@ colors:
 
   # TokyoNight Alacritty Colors - Night
   # Default colors
-  primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
+  # primary:
+  #   background: '0x1a1b26'
+  #   foreground: '0xc0caf5'
 
-  # Normal colors
-  normal:
-    black:   '0x15161E'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xa9b1d6'
+  # # Normal colors
+  # normal:
+  #   black:   '0x15161E'
+  #   red:     '0xf7768e'
+  #   green:   '0x9ece6a'
+  #   yellow:  '0xe0af68'
+  #   blue:    '0x7aa2f7'
+  #   magenta: '0xbb9af7'
+  #   cyan:    '0x7dcfff'
+  #   white:   '0xa9b1d6'
 
-  # Bright colors
-  bright:
-    black:   '0x414868'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xc0caf5'
+  # # Bright colors
+  # bright:
+  #   black:   '0x414868'
+  #   red:     '0xf7768e'
+  #   green:   '0x9ece6a'
+  #   yellow:  '0xe0af68'
+  #   blue:    '0x7aa2f7'
+  #   magenta: '0xbb9af7'
+  #   cyan:    '0x7dcfff'
+  #   white:   '0xc0caf5'
 
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
+  # indexed_colors:
+  #   - { index: 16, color: '0xff9e64' }
+  #   - { index: 17, color: '0xdb4b4b' }
 
   # Moonlight Theme
   # primary:
@@ -392,41 +317,41 @@ colors:
   #   cyan:    '0x6f99d5'
   #   white:   '0xe6e8f0'
 
-  # # Catppuccin!
-  # primary:
-  #     background: "0x1B1623"
-  #     foreground: "0xB9C4E3"
+  # Catppuccin!
+  primary:
+      background: "0x1B1623"
+      foreground: "0xB9C4E3"
 
-  # # Colors the cursor will use if `custom_cursor_colors` is true
-  # cursor:
-  #     text: "0x221E2F"
-  #     cursor: "0xADD692"
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+      text: "0x221E2F"
+      cursor: "0xADD692"
 
-  # # Normal colors
-  # normal:
-  #     black: "0x0E0C13"
-  #     red: "0xE28D8D"
-  #     green: "0xADD692"
-  #     yellow: "0xF0DC89"
-  #     blue: "0x84A5CB"
-  #     magenta: "0xAE9AD6"
-  #     cyan: "0xF0A8E4"
-  #     white: "0xF0F0F5"
+  # Normal colors
+  normal:
+      black: "0x0E0C13"
+      red: "0xE28D8D"
+      green: "0xADD692"
+      yellow: "0xF0DC89"
+      blue: "0x84A5CB"
+      magenta: "0xAE9AD6"
+      cyan: "0xF0A8E4"
+      white: "0xF0F0F5"
 
-  # # Bright colors
-  # bright:
-  #     black: "0x3E4058"
-  #     red: "0xE28D8D"
-  #     green: "0xADD692"
-  #     yellow: "0xF0DC89"
-  #     blue: "0x84A5CB"
-  #     magenta: "0xAE9AD6"
-  #     cyan: "0xF0A8E4"
-  #     white: "0xF0F0F5"
+  # Bright colors
+  bright:
+      black: "0x3E4058"
+      red: "0xE28D8D"
+      green: "0xADD692"
+      yellow: "0xF0DC89"
+      blue: "0x84A5CB"
+      magenta: "0xAE9AD6"
+      cyan: "0xF0A8E4"
+      white: "0xF0F0F5"
 
-  # indexed_colors:
-  #     - { index: 16, color: "0xF0DC89" }
-  #     - { index: 17, color: "0xE28D8D" }
+  indexed_colors:
+      - { index: 16, color: "0xF0DC89" }
+      - { index: 17, color: "0xE28D8D" }
 
   # Catppuccino Neon Latte
   # Default colors
