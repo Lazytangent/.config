@@ -50,3 +50,6 @@ format = "via [$symbol($version)]($style) "
 [hostname]
 ssh_only = false
 format = "@ [$hostname]($style) "
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )(\[$duration\])]($style)'
