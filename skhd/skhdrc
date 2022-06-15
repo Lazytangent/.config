@@ -1,5 +1,5 @@
 # vim: ft=bash: foldmethod=marker
-
+# Grammar {{{
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
 # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
@@ -77,6 +77,7 @@
 # TO INTERACT WITH THE YABAI WM. THESE ARE SUPPOSED TO BE USED AS #
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
+# }}}
 
 # Mode declarations {{{
 :: default        : ~/.local/bin/skhd_spacebar_modes default
