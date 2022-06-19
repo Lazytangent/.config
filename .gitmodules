@@ -13,3 +13,6 @@
 [submodule "vanillamacs"]
 	path = vanillamacs
 	url = git@github.com:Lazytangent/vanillamacs.git
+[submodule "wezterm"]
+	path = wezterm
+	url = git@github.com:Lazytangent/wezterm-config.git
