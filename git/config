@@ -1,0 +1,28 @@
+[user]
+        name = Lazytangent
+        email = peter.tn.mai@gmail.com
+	signingkey = FBB876F712424829
+[core]
+        editor = nvim
+	pager = delta
+	fsmonitor = false
+[url "git@github.com:"]
+        insteadOf = gh:
+[url "git@github.com:Lazytangent/"]
+        insteadOf = gh:L/
+[init]
+        defaultBranch = main
+[pull]
+        rebase = false
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	confictstyle = diff3
+[diff]
+	colorMoved = default
+[commit]
+	gpgsign = true
+[remote "origin"]
+	prune = true
