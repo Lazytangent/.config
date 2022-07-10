@@ -176,6 +176,8 @@ alt + ctrl - 2  : yabai -m display --focus 2
 alt + ctrl - 3  : yabai -m display --focus 3
 alt + ctrl - 4  : yabai -m display --focus 4
 alt + ctrl - 5  : yabai -m display --focus 5
+alt + ctrl - 0x21 : yabai -m display --focus prev
+alt + ctrl - 0x1E : yabai -m display --focus next
 
 # send window to monitor and follow focus
 cmd + ctrl - c  : yabai -m window --display next; yabai -m display --focus next
