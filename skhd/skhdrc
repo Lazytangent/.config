@@ -116,6 +116,8 @@ default < alt - 0x21 ; normal
 
 normal < i            ; default
 normal < ctrl - 0x21  ; default
+normal < escape       ; default
+normal < ctrl - c     ; default
 
 ## }}}
 
