@@ -183,8 +183,8 @@ cmd + ctrl - 3  : yabai -m window --display 3; yabai -m display --focus 3
 cmd + ctrl - 4  : yabai -m window --display 4; yabai -m display --focus 4
 cmd + ctrl - n  : yabai -m window --display next; yabai -m display --focus next
 cmd + ctrl - p  : yabai -m window --display prev; yabai -m display --focus prev
-cmd + ctrl - ]  : yabai -m window --display next; yabai -m display --focus next
-cmd + ctrl - [  : yabai -m window --display prev; yabai -m display --focus prev
+cmd + ctrl - 0x21  : yabai -m window --display next; yabai -m display --focus next
+cmd + ctrl - 0x1E  : yabai -m window --display prev; yabai -m display --focus prev
 
 # rotate through layouts
 alt - b : yabai -m space --layout bsp
