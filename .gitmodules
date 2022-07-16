@@ -16,3 +16,6 @@
 [submodule "wezterm"]
 	path = wezterm
 	url = git@github.com:Lazytangent/wezterm-config.git
+[submodule "emacs"]
+	path = emacs
+	url = git@github.com:plexus/chemacs2.git
