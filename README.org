@@ -1,3 +1,13 @@
 #+TITLE: =.config= Files
 
 Files that belong in the =$HOME/.config=
+
+** Bare Repository
+- [[https://www.atlassian.com/git/tutorials/dotfiles][Atlassian Dotfiles Tutorial]]
+
+- Arch specific configuration
+#+begin_src bash
+alias config="$(which git) --git-dir=$HOME/config/.git --work-tree=$HOME/.config"
+config checkout [<filename>]
+config config --local status.showUntrackedFiles no
+#+end_src

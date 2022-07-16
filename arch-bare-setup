@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -eu
+
+git clone --bare git@github.com/Lazytangent/config.git $HOME/config
+function config {
+    $(which git) --git-dir=$HOME/.config/.git/ --work-tree=$HOME/.config $@
+}
+
+mkdir -p .config-backup
+config checkout
+if [ $? = 0 ]; then
+    echo "Checked out config.";
+else
+    echo "Backing up pre-existing dotfiles.";
+    config checkout 2>&1 | egrep "\s+\." | awk '{print $1}' | xargs -I {} mv {} .config-backup/{}
+fi
+config checkout
+config config status.showUntrackedFiles no
