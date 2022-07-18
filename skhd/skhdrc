@@ -26,6 +26,7 @@ active                        < f17           ; default
 
 emacs < cmd + ctrl + shift + alt - x ; default
 emacs < f18 ; default
+emacs < f19 ; default
 
 # }}}
 
