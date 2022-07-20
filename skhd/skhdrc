@@ -176,6 +176,8 @@ leader < a ; active
 leader < l ; layout
 leader < r ; resize
 
+leader < d : kitty --session ~/.config/kitty/sessions/dev.conf
+
 ## }}}
 
 # }}}
