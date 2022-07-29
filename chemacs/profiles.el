@@ -1,4 +1,5 @@
 (("default" . ((user-emacs-directory . "~/.config/doom-emacs")))
  ("doom" . ((user-emacs-directory . "~/.config/doom-emacs")))
  ("custom" . ((user-emacs-directory . "~/.config/custom-emacs")))
+ ("plain" . ((user-emacs-directory . "~/.config/plainmacs")))
  ("vanilla" . ((user-emacs-directory . "~/.config/vanillamacs"))))
