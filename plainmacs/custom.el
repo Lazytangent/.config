@@ -54,7 +54,10 @@
 (use-package yasnippet-snippets)
 (yas-global-mode 1)
 
-(use-package dracula-theme)
+(use-package dracula-theme
+             :ensure t
+             :config
+             (load-theme 'dracula t))
 
 (setq backup-directory-alist `(("." . "~/.saves")))
 (custom-set-variables
@@ -63,7 +66,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("73803d7cebbc240fd6cd8a54077b8fbf0b263a25db48579f5953279986283481" default))
+   '("05626f77b0c8c197c7e4a31d9783c4ec6e351d9624aa28bc15e7f6d6a6ebd926" "73803d7cebbc240fd6cd8a54077b8fbf0b263a25db48579f5953279986283481" default))
  '(mac-option-modifier '(:ordinary meta :function alt :mouse alt))
  '(package-selected-packages
    '(dracula-theme yasnippet-snippets yasnippet magit company which-key helm use-package))
