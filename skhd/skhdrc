@@ -8,19 +8,21 @@
 :: normal       @ : ~/.local/bin/skhd_spacebar_modes normal
 :: leader       @ : ~/.local/bin/skhd_spacebar_modes leader
 :: emacs          : ~/.local/bin/skhd_spacebar_modes emacs
+:: thirds       @ : ~/.local/bin/skhd_spacebar_modes thirds
 
 # switch modes (testing, for now) {{{
-default, passthrough, active  < cmd + alt - x ; resize
-default, passthrough, active  < f18           ; resize
-default, resize, active       < cmd + alt - m ; passthrough
-default, resize, active       < f19           ; passthrough
-default, resize, passthrough  < f17           ; active
-default, resize, passthrough  < cmd + alt - a ; active
-default                       < alt - x       ; emacs
+default, passthrough, active  < cmd + alt - x   ; resize
+default, passthrough, active  < f18             ; resize
+default, resize, active       < cmd + alt - m   ; passthrough
+default, resize, active       < f19             ; passthrough
+default, resize, passthrough  < f17             ; active
+default, resize, passthrough  < cmd + alt - a   ; active
+default                       < alt - x         ; emacs
+default                       < alt + shift - t ; thirds
 
 resize, passthrough, active   < cmd + alt - z ; default
-resize, active                < escape        ; default
-passthrough                   < f19           ; default
+resize, active, thirds        < escape        ; default
+passthrough, thirds           < f19           ; default
 resize                        < f18           ; default
 active                        < f17           ; default
 
@@ -222,5 +224,16 @@ resize < shift - h : yabai -m window --resize left:20:0
 resize < shift - j : yabai -m window --resize bottom:0:-20
 resize < shift - k : yabai -m window --resize top:0:20
 resize < shift - l : yabai -m window --resize right:-20:0
+
+# }}}
+
+# Thirds mode mappings {{{
+
+thirds < 1 : yabai -m window --toggle float;\
+             yabai -m window --grid 1:3:0:1:1:1
+thirds < 2 : yabai -m window --toggle float;\
+             yabai -m window --grid 1:3:1:1:1:1
+thirds < 3 : yabai -m window --toggle float;\
+             yabai -m window --grid 1:3:2:1:1:1
 
 # }}}
