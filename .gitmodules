@@ -19,3 +19,6 @@
 [submodule "emacs"]
 	path = emacs
 	url = git@github.com:plexus/chemacs2.git
+[submodule "spacemacs"]
+	path = spacemacs
+	url = https://github.com/syl20bnr/spacemacs
